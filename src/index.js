@@ -1,17 +1,47 @@
 import React from 'react';
+import { useState } from "react";
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './css/styles.scss';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import S1ini from './S1ini.js';
+import S2now from './S2now.js';
+import LightBox from "./LightBox";
+import S3about from "./S3about";
+import S4holder from "./S4holder";
+import S5webDev from "./S5webDev";
+import S6programmin from "./S6programmin";
+import S7designin from "./S7designin";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function RestOfThePage() {
+    return (
+        <>
+            <LightBox/>
+            <S3about/>
+            <S4holder/>
+            <S5webDev/>
+            <S6programmin/>
+            <S7designin/>
+        </>
+    )
+}
+
+function Page() {
+    const [pass, setPass] = useState(false);
+
+    const sendPass = (passdata) => {
+        setPass(passdata);
+        console.log(pass);
+    }
+
+    return (<>
+        <S1ini/>
+        <S2now sendPass={sendPass}/>
+        {pass ? <RestOfThePage/> : <></>}
+        </>
+    )
+}
+
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
+root.render(<Page/>);
+
