@@ -1,4 +1,12 @@
 import React from 'react';
+import {
+    RecoilRoot,
+    atom,
+    selector,
+    useRecoilState,
+    useRecoilValue,
+} from 'recoil';
+
 import { useState } from "react";
 import ReactDOM from 'react-dom/client';
 import './css/styles.scss';
@@ -25,19 +33,21 @@ function RestOfThePage() {
     )
 }
 
+
 function Page() {
     const [pass, setPass] = useState(false);
 
     const sendPass = (passdata) => {
         setPass(passdata);
-        console.log(pass);
     }
 
-    return (<>
+
+
+    return (<RecoilRoot>
         <S1ini/>
         <S2now sendPass={sendPass}/>
         {pass ? <RestOfThePage/> : <></>}
-        </>
+        </RecoilRoot>
     )
 }
 

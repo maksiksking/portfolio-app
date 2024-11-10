@@ -1,6 +1,7 @@
 import '../css/styles.scss';
 
-
+import {useRecoilState, useRecoilValue} from "recoil";
+import {lightBoxAtom} from "../recoil/atom/lightBoxAtom"
 
 interface DiscombobulateDataProps {
     id: string;
@@ -9,6 +10,8 @@ interface DiscombobulateDataProps {
 }
 
 function DesiRight() {
+    const [_, setCheck] = useRecoilState(lightBoxAtom);
+
     const data = [
         {id: "Oh god Afterplace is such an underrated game, it is so good", img: "/img/afterworld.png", ratio: "s"},
         {id: "Lit 🔥 unset", img: "/img/amazingsunsetv1.png", ratio: "w"},
@@ -46,40 +49,35 @@ function DesiRight() {
     ]
 
     function DiscombobulateData(props: DiscombobulateDataProps) {
+        let type: string = "something broke";
         if (props.ratio === "w") {
             if (Math.floor(Math.random() * 7) === 0) {
-                return (<img className={"four-horizontal-grid-cells"} src={props.img} alt={props.id}/>
-                )
+                type = "four-horizontal-grid-cells";
             }
-            return (
-                <img className={"wide-image"} src={props.img} alt={props.id}/>
-            );
+            else {
+                type = "wide-image";
+            }
         }
         if (props.ratio === "s1k") {
-            return (
-                <img className={"eight-grid-cells"} src={props.img} alt={props.id}/>
-            );
+            type = "eight-grid-cells";
         }
         if (props.ratio === "s2r") {
-            return (
-                <img className={"six-grid-cells"} src={props.img} alt={props.id}/>
-            );
+            type = "six-grid-cells";
         }
         if (props.ratio === "s3s") {
-            return (
-                <img className={"four-horizontal-grid-cells"} src={props.img} alt={props.id}/>
-            );
+            type = "four-horizontal-grid-cells";
         }
-        else {
+        if (props.ratio === "s") {
             if (Math.floor(Math.random() * 7) === 0) {
-                return (<img className={"four-grid-cells"} src={props.img} alt={props.id}/>
-            )
+                type = "four-grid-cells";
             }
-            return (
-                <img className={"one-grid-cell"} src={props.img} alt={props.id}/>
-            );
+            else {
+                type = "one-grid-cell";
+            }
         }
-
+        return (
+            <img onClick={() => {setCheck(true);}} className={type} src={props.img} alt={props.id}/>
+        );
 
     }
 

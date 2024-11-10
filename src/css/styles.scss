@@ -495,7 +495,6 @@ $progBgActualWidth: 100vw-0.5vw;
 .S7designin {
   background-color: #fae0b6;
   position: relative;
-  z-index: -3;
   display: flex;
   .desiLeft {
     height: 100vh;
@@ -530,6 +529,8 @@ $progBgActualWidth: 100vw-0.5vw;
       height: 100%;
       object-fit: cover;
       background-color: white;
+
+      cursor: pointer;
     }
 
     img.pne-grid-cell {
@@ -568,10 +569,18 @@ $progBgActualWidth: 100vw-0.5vw;
   display: none;
 }
 
+.no-pointer {
+  pointer-events: all !important;
+}
+
 .lightBox {
+  cursor: pointer;
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  z-index: 10009;
+  position: fixed;
+  opacity: 0;
   inset: 0;
+  pointer-events: none;
   background-color: black;
 }
