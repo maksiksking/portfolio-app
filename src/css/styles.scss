@@ -284,7 +284,7 @@ body {
   .allEmWrapper {
     height: 0;
     width: 100vw;
-    margin-top: -15vh;
+
 
     .allEmBoxes {
       width: 80vw;
@@ -299,6 +299,7 @@ body {
       grid-row-gap: 12px;
 
       a {
+        border: solid 3px black;
         cursor: pointer;
         background-color: lightblue;
 
