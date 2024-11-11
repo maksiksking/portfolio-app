@@ -33,7 +33,7 @@ function AllEmBoxes() {
     </video>
     const teaVid = <video className={"corVid"} src={"../vid/webdvid2.mp4"} loop muted autoPlay={true}>
     </video>
-    const hereVid = <video className={"corVid"} src={"../vid/baguette.webm"} loop muted autoPlay={true}>
+    const hereVid = <video className={"corVid"} src={"../vid/webdvid3.mp4"} loop muted autoPlay={true}>
     </video>
     const bwkittyVid = <video className={"corVid"} src={"../vid/webdvid4.mp4"} loop muted autoPlay={true}>
     </video>
