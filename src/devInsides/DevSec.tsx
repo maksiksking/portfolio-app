@@ -43,9 +43,11 @@ function DistributeData(props: distributeDataProps) {
                             <p>
                                 {props.text}
                                 <br/><br/>
-                                <a target={"_blank"} rel="noreferrer" href={props.githublnk}>Github #</a>
-                            </p>
-                        </div>
+                                <a className={"gitLinkDeco"} target={"_blank"} rel="noreferrer"
+                            href={props.githublnk}>Github #
+                        </a>
+                    </p>
+                </div>
                     </div>
                 </div>
             </>

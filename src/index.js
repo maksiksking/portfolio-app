@@ -45,8 +45,8 @@ function Page() {
 
     return (<RecoilRoot>
         <S1ini/>
-        <S2now sendPass={sendPass}/>
-        {pass ? <RestOfThePage/> : <></>}
+        {/*<S2now sendPass={sendPass}/>*/}
+        <RestOfThePage/>
         </RecoilRoot>
     )
 }

@@ -4,68 +4,72 @@ import {animated, useSpring} from '@react-spring/web';
 
 import {useRecoilState, useRecoilValue} from 'recoil';
 import {lightBoxAtom} from "./recoil/atom/lightBoxAtom"
+import {useState, useCallback} from "react";
 
 function LightBox() {
-    const check = useRecoilValue(lightBoxAtom);
-
-
+    const recoilData: object = useRecoilValue(lightBoxAtom);
+    const check: boolean = (recoilData[0]?.check === "true");
+    const img: string = recoilData[1]?.img;
     const [_, setCheck] = useRecoilState(lightBoxAtom);
-
-    setInterval(() => {
-        console.log(check)
-    }, 2000)
 
 
     const [springs, api] = useSpring(() => ({
-        opacity: 0.0,
+        backgroundColor: 'rgba(0, 0, 0, 0)',
         config: {
-            mass: 2,
-            friction: 30,
-            tension: 120,
+            duration: 400,
         }
     }))
 
     let theBox = document.getElementsByClassName("lightBox")[0]
+    console.log(theBox)
 
     if (check) {
-        fadeIn()
-        setTimeout(() => {
-            theBox.classList.add("no-pointer")
-        }, 400)
+        console.log(theBox)
+        theBox.classList.add("no-pointer")
     }
 
     function display() {
-        // if (check) {
-        //     document.body.style.overflow = 'hidden'
-        // }
         console.log("test")
     }
 
-    function unDisplay() {
+    const unDisplay = () => {
         fadeOut();
+        document.body.style.overflowY = 'initial';
+
+        setCheck(false);
         theBox.classList.remove("no-pointer")
-        setTimeout(() => {
-            setCheck(false);
-        }, 500)
     }
+
 
     function fadeIn() {
         api.start({
-            from: { opacity: 0.0 },
-            to: { opacity: 0.8 },
+            from: {backgroundColor: 'rgba(0, 0, 0, 0)'},
+            to: {backgroundColor: 'rgba(0, 0, 0, 0.79)'},
         })
-        // on={() => {fadeIn(); display()}}
-    }
-    function fadeOut() {
-        api.start({
-            from: { opacity: 0.8 },
-            to: { opacity: 0.0 },
-        })
-        // on={() => {fadeIn(); display()}}
     }
 
+    function fadeOut() {
+        api.start({
+            from: {backgroundColor: 'rgba(0, 0, 0, 0.79)'},
+            to: {backgroundColor: 'rgba(0, 0, 0, 0)'},
+        })
+    }
+
+
+    // lazy af
+    if (!img) {
+        setTimeout(display, 500)
+    }
+
+
     return (
-        <animated.div onClick={() => unDisplay()} onChange={() => {display()}}  style={{...springs}} className={"lightBox " + (check ? "" : "hidden-elem")}>
+        <animated.div onClick={unDisplay} onLoad={() => {
+            fadeIn()
+        }}
+                      style={{...springs}}
+                      className={"lightBox " + (check ? "" : "hidden-elem") + (check ? "no-pointer" : "")}>
+            <img className={"lightBoxImg"} src={img} alt="lightBoxImg"/>
+            <p className={"lightBoxTxt"}>{recoilData[2]?.text}</p>
         </animated.div>
     )
 

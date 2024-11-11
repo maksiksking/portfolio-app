@@ -1,6 +1,10 @@
 import '../css/styles.scss';
 
+import {useState} from "react";
+
 function DesiLeft() {
+    const [x, setX] = useState(1);
+    const [pointer, setPointer] = useState("pointer");
     return (
         <svg width="754" height="631" viewBox="0 0 754 631" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="222" cy="343" rx="93" ry="24" fill="#747474"/>
@@ -14,15 +18,32 @@ function DesiLeft() {
             <rect x="167" y="317" width="49" height="8" fill="#272727"/>
             <rect x="184" y="317" width="99" height="8" fill="#2D2D2D"/>
             <text fill="black" style={{whiteSpace: "pre"}} font-family="Fredericka the Great"
-                  font-size="50" letter-spacing="0em"><tspan x="27" y="48.7373">Graphic, 3D, Art and &#10;</tspan>
-                <tspan x="27" y="109.737">miscellanious</tspan></text>
+                  font-size="50" letter-spacing="0em">
+                <tspan x="27" y="48.7373">Graphic, 3D, Art and &#10;</tspan>
+                <tspan x="27" y="109.737">miscellanious</tspan>
+            </text>
             <text fill="black" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="30"
-                  letter-spacing="0em"><tspan x="47" y="543.205">This is very far from every little tiny work of&#10;</tspan>
-                <tspan x="47" y="576.205">mine but, these are the very highlights.</tspan></text>
+                  letter-spacing="0em">
+                <tspan x="47" y="543.205">This is very far from every little tiny work of&#10;</tspan>
+                <tspan x="47" y="576.205">mine but, these are the very highlights.</tspan>
+            </text>
             <text fill="black" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="15"
-                  letter-spacing="0em"><tspan x="99.1025" y="387.352">which way is the bench facing?&#10;</tspan>
-                <tspan x="198.346" y="404.353">( &#x361;&#xb0; &#x35c;&#x296; &#x361;&#xb0;)</tspan></text>
-            <rect x="141" y="418" width="156" height="20" fill="#161616"/>
+                  letter-spacing="0em">
+                <tspan x="99.1025" y="387.352">which way is the bench facing?&#10;</tspan>
+                <tspan x="198.346" y="404.353">( &#x361;&#xb0; &#x35c;&#x296; &#x361;&#xb0;)</tspan>
+            </text>
+            <text fill="black" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="15"
+                  letter-spacing="0em">
+                <tspan x="200" y="432" style={{zIndex: 0}}>both&#10;</tspan>
+            </text>
+            <rect className={"lilSpoiler"} onClick={() => {
+                setX(0) ; setPointer("initial")
+            }} style={{opacity: x, cursor: pointer}} x="141" y="418" width="156" height="20" fill="#161616"/>
+            <text>
+
+                <tspan x="99.1025" y="387.352">which way is the bench facing?&#10;</tspan>
+                <tspan x="198.346" y="404.353">( &#x361;&#xb0; &#x35c;&#x296; &#x361;&#xb0;)</tspan>
+            </text>
             <circle cx="144.5" cy="486.5" r="6" stroke="black" stroke-width="3"/>
             <circle cx="193" cy="621" r="8.5" stroke="black" stroke-width="3"/>
             <path fill-rule="evenodd" clip-rule="evenodd"

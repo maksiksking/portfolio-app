@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Fredericka+the+Great&family=Karla:ital,wght@0,200..800;1,200..800&family=Tiny5&display=swap');
+
 $scrollBarWidth: 0.65vw;
 
 // mixins
@@ -105,28 +106,33 @@ body {
 
   width: 100vw;
   height: 100vh;
+
   .nowCont {
     width: 75vw;
     height: 80vh;
+
     p {
       font-size: 3rem;
       color: white;
     }
+
     .s2txt2 {
       padding-top: 8%;
     }
+
     .s2txt3 {
       padding-top: 5%;
+
       .caret0 {
         animation: infinite 1.5s 2s blink;
       }
     }
+
     .s2txt4 {
       padding-top: 4%;
     }
   }
 }
-
 
 
 .s3about {
@@ -182,6 +188,7 @@ body {
     ul {
       list-style: none;
       font-size: 1.8rem;
+
       li {
         margin-top: 3.3vh;
       }
@@ -197,6 +204,7 @@ body {
     .underProfile {
       padding-left: 2.2vw;
     }
+
     img {
       margin-left: 2.6vw;
       width: 20.8vw;
@@ -244,6 +252,7 @@ body {
 
 .s5webDev {
   background-image: url("../img/ContrastBg.svg");
+
   background-size: cover;
 
   // simple solutions
@@ -258,13 +267,15 @@ body {
 
   .topperContainer {
     margin-top: 20vh;
+
     .webDevHeader {
       @include comfortaa;
       color: white;
 
       margin-left: 2.5vw;
-      font-size: 11.25rem ;
+      font-size: 11.25rem;
     }
+
     svg {
       margin-left: 2.5vw;
     }
@@ -274,6 +285,7 @@ body {
     height: 0;
     width: 100vw;
     margin-top: -15vh;
+
     .allEmBoxes {
       background-color: white;
       width: 80vw;
@@ -283,13 +295,21 @@ body {
       display: grid;
       overflow-x: clip;
       grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: repeat(3, 1fr) ;
+      grid-template-rows: repeat(3, 1fr);
       grid-column-gap: 3px;
       grid-row-gap: 3px;
 
       div {
         cursor: pointer;
         background-color: lightblue;
+
+        height: 5%;
+
+        video {
+          width: 100%;
+          height: 39.3vh;
+          object-fit: cover;
+        }
       }
 
       div:nth-child(1) {
@@ -307,15 +327,15 @@ body {
 }
 
 .wdiv1 {
-  background-image: url("../img/compfullhd.png");
-  background-size: 80vw;
-  background-repeat: no-repeat;
-  background-position: center;
+  //background-image: url("../img/compfullhd.png");
+  //background-size: 80vw;
+  //background-repeat: no-repeat;
+  //background-position: center;
 }
 
 .wdiv3 {
-  background-image: url("../img/compfullhd.png");
-  background-size: cover;
+  //background-image: url("../img/compfullhd.png");
+  //background-size: cover;
 }
 
 .webDevLineWrapper {
@@ -326,16 +346,18 @@ body {
   height: 0;
 }
 
-$progBgActualWidth: 100vw-0.5vw;
+$progBgActualWidth: 100 vw-0 .5vw;
 
 .s6programmin {
   display: flex;
   margin-top: -0.1vh;
   height: 455vh;
   background-color: #191919;
+
   .progBgImg {
     position: absolute;
     margin-top: -44.5vh;
+    margin-left: -1.4vw;
     width: $progBgActualWidth;
     transform: scaleY(90%);
   }
@@ -346,7 +368,6 @@ $progBgActualWidth: 100vw-0.5vw;
   width: 100%;
   height: 93.7%;
   margin-left: 5.5%;
-
 
   .coverUp {
     position: absolute;
@@ -375,6 +396,7 @@ $progBgActualWidth: 100vw-0.5vw;
   .progCaretCont {
     display: flex;
     flex-direction: row;
+
     .caret1 {
       animation: infinite 1.5s 2s blink;
 
@@ -389,6 +411,7 @@ $progBgActualWidth: 100vw-0.5vw;
   .devSecContainer {
     margin-top: -29vh;
   }
+
   .devSec {
     display: flex;
     flex-direction: row;
@@ -413,12 +436,14 @@ $progBgActualWidth: 100vw-0.5vw;
         margin-top: 20%;
         margin-left: 1%;
       }
+
       img:nth-child(2) {
         width: 9%;
         position: absolute;
         margin-top: 30%;
         margin-left: 12%;
       }
+
       img:nth-child(3) {
         width: 7%;
         position: absolute;
@@ -457,13 +482,16 @@ $progBgActualWidth: 100vw-0.5vw;
         h3 {
           font-size: 3rem;
         }
+
         svg {
           padding-top: 1%;
           padding-bottom: 1%;
         }
+
         p {
           font-size: 1.3rem;
         }
+
         a {
           color: #555555;
         }
@@ -487,23 +515,44 @@ $progBgActualWidth: 100vw-0.5vw;
 
   margin-top: 5%;
   margin-left: 70%;
+
+
   a {
     color: #555555;
   }
 }
 
+.gitPlug > a:hover {
+  color: #12FEFFFF;
+  transition: all 0.3s ease-in-out;
+}
+
+.gitLinkDeco {
+  color: #555555;
+}
+
+.gitLinkDeco:hover {
+  color: #12FEFFFF;
+  transition: all 0.3s ease-in-out;
+}
+
+
 .S7designin {
   background-color: #fae0b6;
   position: relative;
   display: flex;
+
   .desiLeft {
-    height: 100vh;
+    height: 100.9vh;
     padding-top: 5vh;
     background-color: #fae0b6;
+
     svg {
+      padding-top: 3.5vh;
       background-color: #fae0b6;
     }
   }
+
   .desiRight {
     width: 100%;
 
@@ -514,11 +563,11 @@ $progBgActualWidth: 100vw-0.5vw;
     border-left: black solid 3px;
 
     padding-left: 10px;
-    padding-top: 2vh;
+    padding-top: 6vh;
 
     display: grid;
-    grid-template-columns: repeat(10, 68px);
-    grid-template-rows: repeat(11, 68px);
+    grid-template-columns: repeat(10, 4.43vw);
+    grid-template-rows: repeat(9, 4.43vw);
     grid-auto-rows: auto;
     grid-auto-flow: dense; // <- oh my god does this thing have power
     gap: 8px;
@@ -530,7 +579,13 @@ $progBgActualWidth: 100vw-0.5vw;
       object-fit: cover;
       background-color: white;
 
+      -webkit-filter: brightness(100%);
       cursor: pointer;
+    }
+
+    img:hover {
+      -webkit-filter: brightness(50%);
+      transition: all 0.3s ease-in-out;
     }
 
     img.pne-grid-cell {
@@ -567,10 +622,18 @@ $progBgActualWidth: 100vw-0.5vw;
 
 .hidden-elem {
   display: none;
+
+  img {
+    display: none;
+  }
 }
 
 .no-pointer {
   pointer-events: all !important;
+
+  img {
+    pointer-events: all !important;
+  }
 }
 
 .lightBox {
@@ -579,8 +642,61 @@ $progBgActualWidth: 100vw-0.5vw;
   height: 100vh;
   z-index: 10009;
   position: fixed;
-  opacity: 0;
   inset: 0;
   pointer-events: none;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  p {
+    font-family: sans-serif;
+
+    color: white;
+    padding-top: 2%;
+    font-size: 2rem;
+  }
+}
+
+.desiLitImg {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.lightBoxImg {
+  border: solid black 3px;
+  margin-top: -2%;
+  user-select: none;
+
+  max-height: 75%;
+}
+
+
+
+.opacityLightBoxWrapper {
+  opacity: 0;
+}
+
+.lilSpoiler {
+  transition: all 0.8s ease;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.skills {
+  z-index: 10000;
+
+
+
+  margin-top: 116vh;
+  margin-left: 92vh;
+  position: absolute;
+  width: 55vw;
+
+
 }

@@ -2,6 +2,7 @@ import React from "react";
 import './css/styles.scss';
 
 import Card from './svgComps/s3/Card.js'
+import Skills from './svgComps/s3/Skills'
 import BottomRect from "./aboutPageInsides/BottomRect";
 import RightPartInAbout from "./aboutPageInsides/RightPartInAbout";
 
@@ -22,7 +23,9 @@ function S3about() {
 
         {/* layout */}
 
-        {<Card/>}
+
+        <Card/>
+        <Skills />
         <RightPartInAbout/>
         <BottomRect/>
 
