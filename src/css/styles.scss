@@ -287,7 +287,6 @@ body {
     margin-top: -15vh;
 
     .allEmBoxes {
-      background-color: white;
       width: 80vw;
       height: 125vh;
       //padding: 1vw;
@@ -296,10 +295,10 @@ body {
       overflow-x: clip;
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: repeat(3, 1fr);
-      grid-column-gap: 3px;
-      grid-row-gap: 3px;
+      grid-column-gap: 12px;
+      grid-row-gap: 12px;
 
-      div {
+      a {
         cursor: pointer;
         background-color: lightblue;
 
@@ -312,11 +311,11 @@ body {
         }
       }
 
-      div:nth-child(1) {
+      a:nth-child(1) {
         z-index: 10000;
       }
 
-      div:nth-child(2) {
+      a:nth-child(2) {
         z-index: 9999;
         background-color: red !important;
       }
