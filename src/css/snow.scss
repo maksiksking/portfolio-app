@@ -3,13 +3,16 @@ $SNOWDROPS_LENGTH: 100;
 
 @import "include-media.scss";
 
+$breakpoints: (phone: 320px, phoneSE: 375px, tablet: 768px, desktop: 1024px);
+
+
 @include media(">phone", "<=tablet") {
   $SNOWDROPS_LENGTH: 50;
 }
 
 .g-snows {
   position: absolute;
-  overflow: visible; // cfg add cover and set up the anim for all of em
+  overflow: visible;
   z-index: -1;
 
   width: 110vw;
@@ -46,6 +49,9 @@ $SNOWDROPS_LENGTH: 100;
   $blur-base: 5;
 
   @include media(">phone", "<=tablet") {
+    height: 10vh;
+  }
+  @include media(">phoneSE", "<=tablet") {
     height: 10vh;
 
   }
