@@ -1,6 +1,12 @@
 // they did most of the work -> https://codepen.io/kyoyababa/pen/OWJaoB
 $SNOWDROPS_LENGTH: 100;
 
+@import "include-media.scss";
+
+@include media(">phone", "<=tablet") {
+  $SNOWDROPS_LENGTH: 50;
+}
+
 .g-snows {
   position: absolute;
   overflow: visible; // cfg add cover and set up the anim for all of em
@@ -8,6 +14,10 @@ $SNOWDROPS_LENGTH: 100;
 
   width: 110vw;
   height: 100vh;
+
+  @include media(">phone", "<=tablet") {
+    height: 10vh;
+  }
 }
 
 .g-snows > li {
@@ -25,6 +35,7 @@ $SNOWDROPS_LENGTH: 100;
   animation-fill-mode: forwards;
 
 
+
   $rotation-base: 45;
   $snow-size-base: 30;
   $browser-buffer: 50;
@@ -33,6 +44,13 @@ $SNOWDROPS_LENGTH: 100;
   $minimum-falling-speed: 5000;
   $animate-delay-base: 5000;
   $blur-base: 5;
+
+  @include media(">phone", "<=tablet") {
+    height: 10vh;
+
+  }
+
+
 
   //$rotation: 90
 
