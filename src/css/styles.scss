@@ -288,8 +288,8 @@ body {
 
     .allEmBoxes {
       width: 80vw;
-      height: 155vh;
-      //padding: 1vw;
+      height: 175vh;
+      margin-top: 20vh;
 
       display: grid;
       overflow-x: clip;
@@ -301,6 +301,19 @@ body {
       border-radius: 6px;
       background-color: #1e1e1e;
       padding: 5vh;
+
+      a:nth-child(3) {
+        cursor: initial !important;
+      }
+      a:nth-child(5) {
+        cursor: initial !important;
+      }
+      a:nth-child(6) {
+        cursor: initial !important;
+      }
+      a:nth-child(7) {
+        cursor: initial !important;
+      }
 
       a {
         cursor: pointer;
