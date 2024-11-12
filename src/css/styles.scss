@@ -288,39 +288,34 @@ body {
 
     .allEmBoxes {
       width: 80vw;
-      height: 125vh;
+      height: 155vh;
       //padding: 1vw;
 
       display: grid;
       overflow-x: clip;
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: repeat(3, 1fr);
-      grid-column-gap: 12px;
+      grid-column-gap: 22px;
       grid-row-gap: 12px;
 
+      border-radius: 6px;
+      background-color: #1e1e1e;
+      padding: 5vh;
+
       a {
-        border: solid 3px black;
         cursor: pointer;
-        background-color: lightblue;
 
         height: 5%;
 
         video {
+
           width: 100%;
-          height: 39.3vh;
+          height: 55.3vh;
           object-fit: cover;
+          clip-path: inset(20px 0 20px 0);
+
         }
       }
-
-      a:nth-child(1) {
-        z-index: 10000;
-      }
-
-      a:nth-child(2) {
-        z-index: 9999;
-        background-color: red !important;
-      }
-
       // more in the component cuz variables
     }
   }
@@ -459,13 +454,24 @@ $progBgActualWidth: 100 vw-0 .5vw;
         margin-bottom: 1%;
         //height: 51.87%;
 
-        border: white 3px solid;
+        border: black 3px solid;
 
         margin-left: 33%;
       }
 
       .devVideoEven {
         margin-left: 4.5vw;
+      }
+
+      img {
+        width: 60%;
+        margin-top: 5%;
+        margin-bottom: 1%;
+        //height: 51.87%;
+
+        border: black 3px solid;
+
+        margin-left: 33%;
       }
 
       .devSecTxtContainer {

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import '../css/styles.scss';
 import {useSpring, animated} from '@react-spring/web';
+import ReactPlayer from 'react-player/file'
 
 
 function AllEmBoxes() {

@@ -5,11 +5,11 @@ import React from "react";
 import Snow from "../devInsides/Snow"
 
 // react doesnt wanna eat my path and make a video so I have to import them separately, so weird
-const mouseSpinVid: any = <video src={require("../vid/baguette.webm")} controls={true}/>
-const textLapserVid: any = <video className={"devVideoEven"} src={require("../vid/baguette.webm")} controls={true}/>
-const opApVid: any = <video src={require("../vid/baguette.webm")} controls={true}/> // add them
-const teaModVid: any = <video className={"devVideoEven"} src={require("../vid/baguette.webm")}
-                              controls={true}/>
+const mouseSpinVid: any = <video src={"vid/cursorRealForreal.mp4"} loop={true} muted={true} autoPlay={true} />
+const textLapserVid: any = <img className={"devVideoEven"} src={"vid/impostor.png"} alt={"impostor"}/>
+const opApVid: any = <img src={"vid/imposter2.png"} alt={"impostor2"}/>
+const teaModVid: any = <video className={"devVideoEven"} src={"vid/minceraftReal.mp4"}
+                              loop={true} muted={true} autoPlay={true}/>
 
 
 interface DevSecProps {
