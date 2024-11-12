@@ -50,11 +50,11 @@ function AllEmBoxes() {
     let gridData = [
         {id: 1, a1: 1, a2: 1, a3: 2, a4: 3, vid: futureVid, link: "https://maksiksking.github.io/futureOfUkraineWebDesignCompetition2023h1/"},
         {id: 2, a1: 1, a2: 3, a3: 2, a4: 6, vid: teaVid, link: "https://course-site-f.vercel.app/#"},
-        {id: 3, a1: 2, a2: 1, a3: 3, a4: 3, vid: hereVid, link: ""},
+        {id: 3, a1: 2, a2: 1, a3: 3, a4: 3, vid: hereVid, link: "#"},
         {id: 4, a1: 2, a2: 3, a3: 3, a4: 5, vid: bwkittyVid, link: "https://b-w-kitty-maksiksed.vercel.app/"},
-        {id: 5, a1: 2, a2: 5, a3: 3, a4: 6, vid: oldfolioVid, link: ""},
-        {id: 6, a1: 3, a2: 1, a3: 4, a4: 3, vid: aieEmojifyVid, link: ""},
-        {id: 7, a1: 3, a2: 3, a3: 4, a4: 6, vid: clickTheCityCommisionVid, link: ""}
+        {id: 5, a1: 2, a2: 5, a3: 3, a4: 6, vid: oldfolioVid, link: "#"},
+        {id: 6, a1: 3, a2: 1, a3: 4, a4: 3, vid: aieEmojifyVid, link: "#"},
+        {id: 7, a1: 3, a2: 3, a3: 4, a4: 6, vid: clickTheCityCommisionVid, link: "#"}
     ]
 
 
