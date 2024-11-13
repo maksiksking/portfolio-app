@@ -721,8 +721,8 @@ $progBgActualWidth: 100 vw-0 .5vw;
       border-left: unset;
       padding-top: 0;
       margin-top: -30vh;
-      padding-left: 19vw;
-      padding-bottom: 15vh;
+      padding-left: 8vw;
+
       background-color: initial;
       background-attachment: initial;
     }
@@ -737,6 +737,11 @@ $progBgActualWidth: 100 vw-0 .5vw;
     display: grid;
     grid-template-columns: repeat(10, 4.43vw);
     grid-template-rows: repeat(9, 4.43vw);
+
+    @include media(">phone", "<=tablet") {
+      grid-template-columns: repeat(10, 6.43vw);
+      grid-template-rows: repeat(9, 6.43vw);
+    }
     grid-auto-rows: auto;
     grid-auto-flow: dense; // <- oh my god does this thing have power
     gap: 8px;
@@ -750,6 +755,7 @@ $progBgActualWidth: 100 vw-0 .5vw;
 
       -webkit-filter: brightness(100%);
       cursor: pointer;
+
     }
 
     img:hover {
