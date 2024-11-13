@@ -382,23 +382,12 @@ body {
         margin-top: 2vh;
       }
 
-      a:nth-child(3) {
+      div {
         cursor: initial !important;
       }
 
-      a:nth-child(5) {
-        cursor: initial !important;
-      }
 
-      a:nth-child(6) {
-        cursor: initial !important;
-      }
-
-      a:nth-child(7) {
-        cursor: initial !important;
-      }
-
-      a {
+      a, div {
         cursor: url("../img/cursor1.png"), auto;
 
         height: 5%;
