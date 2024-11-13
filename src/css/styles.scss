@@ -217,7 +217,12 @@ body {
     margin-top: 25.7vh;
     left: 19vw;
 
-
+    @include media(">phone", "<=tablet") {
+      display: none;
+    }
+    @include media(">phoneSE", "<=tablet") {
+      display: none;
+    }
   }
 
   .modernArt {
