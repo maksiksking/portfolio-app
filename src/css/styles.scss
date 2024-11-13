@@ -57,6 +57,8 @@ a {
   color: unset;
 }
 
+
+
 .pointer {
   cursor: pointer;
 }
@@ -397,7 +399,7 @@ body {
       }
 
       a {
-        cursor: pointer;
+        cursor: url("../img/cursor1.png"), auto;
 
         height: 5%;
 
