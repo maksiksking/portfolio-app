@@ -2,11 +2,40 @@ import React from "react";
 import '../css/styles.scss';
 import RightPFPWidget from "./RightPFPWidget";
 
-function ProfileAttribute(props) {
-    return <li>{props.name}</li>
-}
+import {useTrail, useInView, animated, useSpring} from "@react-spring/web";
 
 function RightPart() {
+    const buildInteractionObserverThreshold = (count = 100) => {
+        const threshold = []
+
+        const parts = 1 / count
+
+        for (let i = 0; i <= count; i++) {
+            threshold.push(parseFloat((parts * i).toFixed(2)))
+        }
+
+        return threshold
+    }
+
+
+    const [ref, isInView] = useInView({
+        rootMargin: '10% 0px 10% 0px',
+        amount: buildInteractionObserverThreshold(),
+    })
+
+
+    const styles = useSpring({
+        scale: isInView ? 1 : 0,
+        config: {
+            tension: 300,
+        },
+    })
+
+    function ProfileAttribute(props) {
+        return <animated.li ref={ref} style={styles}>{props.name}</animated.li>
+    }
+
+
     const attributes = [
         {id: "age1", name: "age:", value: "17"},
         {id: "pronouns1", name: "pronouns:", value: "he/him"},

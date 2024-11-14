@@ -1,12 +1,30 @@
-import React from "react";
+import React, {useRef} from "react";
 import '../../css/styles.scss';
+import {useInView, useSpring, animated} from "@react-spring/web";
 
 // Notice: The text is IN the SVG in a <text>! Because it's imported from Figma with
 // Outline Text disabled to keep it SEO, copyable and to save some time
 
 function Skills() {
+    const [ref, isInView] = useInView({
+    })
+    const animatedAlready = useRef(false)
+
+    if (isInView) {
+        animatedAlready.current = true;
+    }
+
+    const styles = useSpring({
+        y: animatedAlready.current ? 100 : (isInView ? 100 : 0),
+        config: {
+            mass: 6,
+            friction: 40,
+            tension: 120,
+        }
+    })
+
     return (
-        <svg className={"skills"} width="1023" height="668" viewBox="0 0 1023 668" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <animated.svg ref={ref} style={styles} className={"skills"} width="1023" height="668" viewBox="0 0 1023 668" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M567.5 5.75V3.25H565H47C42.3056 3.25 38.5 7.05555 38.5 11.75V543.357C38.5 548.052 42.3056 551.857 47 551.857H565H567.5V549.357V5.75Z"
                     fill="white" stroke="#212121" stroke-width="5"/>
@@ -134,7 +152,7 @@ function Skills() {
                       letter-spacing="0em"><tspan x="574" y="501.44">Motion graphics</tspan></text>
                 <text fill="white" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="50"
                       letter-spacing="0em"><tspan x="541" y="505.175">&#xd7;</tspan></text>
-        </svg>
+        </animated.svg>
 
     )
 

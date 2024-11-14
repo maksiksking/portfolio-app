@@ -1,12 +1,30 @@
-import React from "react";
+import React, {useRef} from "react";
 import '../../css/styles.scss';
+import {useInView, useSpring, animated} from "@react-spring/web";
 
 // Notice: The text is IN the SVG in a <text>! Because it's imported from Figma with
 // Outline Text disabled to keep it SEO, copyable and to save some time
 
 function Card() {
+    const [ref, isInView] = useInView({
+    })
+    const animatedAlready = useRef(false)
+
+    if (isInView) {
+        animatedAlready.current = true;
+    }
+
+    const styles = useSpring({
+        x: animatedAlready.current ? 0 : (isInView ? 0 : -100),
+        config: {
+            mass: 6,
+            friction: 70,
+            tension: 120,
+        }
+    })
+
     return (
-            <svg className={"aboutCard"} width="885" height="537" viewBox="0 0 585 537" fill="none"
+            <animated.svg ref={ref} style={styles} className={"aboutCard"} width="885" height="537" viewBox="0 0 585 537" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
                 <rect x="869" width="16" height="537" rx="6" fill="#545454"/>
                 <rect x="869" width="5" height="537" rx="2.5" fill="#212121"/>
@@ -36,7 +54,7 @@ function Card() {
                       fill="#9100BA"/>
                 <rect x="513" y="422" width="2" height="106" rx="1" transform="rotate(-90 513 422)" fill="white"/>
                 <rect x="342" y="276" width="2" height="132" rx="1" transform="rotate(-90 342 276)" fill="white"/>
-            </svg>
+            </animated.svg>
     )
 
 }

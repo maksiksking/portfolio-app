@@ -1,12 +1,32 @@
-import React from "react";
+import React, {useRef} from "react";
 import '../../css/styles.scss';
+import {useInView, useSpring, animated} from "@react-spring/web";
 
 // Notice: The text is IN the SVG in a <text>! Because it's imported from Figma with
 // Outline Text disabled to keep it SEO, copyable and to save some time
 
+// Springs animation doesn't work at all??!
+
 function LiteralCard() {
+    const [ref, isInView] = useInView({
+    })
+    const animatedAlready = useRef(false)
+
+    if (isInView) {
+        animatedAlready.current = true;
+    }
+
+    const styles = useSpring({
+        x: animatedAlready.current ? 0 : (isInView ? 0 : -100),
+        config: {
+            mass: 2,
+            friction: 40,
+            tension: 120,
+        }
+    })
+
     return (
-        <svg className={"literalCard"} width="460" height="368" viewBox="0 0 460 368" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <animated.svg ref={ref} style={styles} className={"literalCard"} width="460" height="368" viewBox="0 0 460 368" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_513_382)">
                 <path
                     d="M-112.414 2.26611H436.414C448.187 2.26611 457.732 11.8027 457.732 23.5666V344.434C457.732 356.198 448.187 365.734 436.414 365.734H-112.414C-124.188 365.734 -133.732 356.198 -133.732 344.434V23.5666C-133.732 11.8027 -124.188 2.26611 -112.414 2.26611Z"
@@ -91,7 +111,7 @@ function LiteralCard() {
                     <rect width="596" height="368" fill="white" transform="translate(-136)"/>
                 </clipPath>
             </defs>
-        </svg>
+        </animated.svg>
     )
 
 }

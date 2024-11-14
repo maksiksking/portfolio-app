@@ -292,6 +292,7 @@ body {
   margin-top: 21.75vh;
 
   .literalCard {
+    margin-left: 0;
     z-index: 2;
 
     @include media(">phone", "<=tablet") {
