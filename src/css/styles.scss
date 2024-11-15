@@ -111,9 +111,33 @@ body {
   width: 100vw;
   height: 100vh;
 
-  h1 {
+  .iniHWrap {
+    cursor: pointer;
+
+    margin-left: -55vw;
+    margin-top: -3vh;
+    background-color: #bd00da; // math
+    mix-blend-mode: hard-light;
+
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+  }
+
+  .iniLangWrap {
+    position: absolute;
+    left: 115vw;
+  }
+
+  .iniH1 {
+    mix-blend-mode: hard-light;
+    pointer-events: none;
+    user-select: none;
+
+    padding: 0.2vw 1vw;
     color: white;
-    font-size: 16rem;
+    z-index: 2;
+    font-size: 4rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 35px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
   }
 }
 
@@ -886,5 +910,43 @@ $progBgActualWidth: 100 vw-0 .5vw;
     margin-top: 126vh;
     margin-left: 52vh;
     width: 60vw;
+  }
+}
+
+.iniIllusion {
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+
+  .iniIllu1 {
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    left: 28%;
+    top: 6%;
+    scale: 0.7;
+
+  }
+  .iniIllu2 {
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    left: 30%;
+    scale: 0.7;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  }
+
+
+  @include media(">phone", "<=tablet") {
+    display: none;
+  }
+  @include media(">phoneSE", "<=tablet") {
+    display: none;
+
   }
 }

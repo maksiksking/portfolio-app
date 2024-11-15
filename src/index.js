@@ -41,14 +41,6 @@ function Page() {
         document.title = 'Maksiks';
     }, []);
 
-    const [pass, setPass] = useState(false);
-
-    const sendPass = (passdata) => {
-        setPass(passdata);
-    }
-
-
-
     return (<RecoilRoot>
         <S1ini/>
         {/*<S2now sendPass={sendPass}/>*/}
