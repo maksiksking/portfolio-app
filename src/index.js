@@ -21,6 +21,7 @@ import S4holder from "./S4holder";
 import S5webDev from "./S5webDev";
 import S6programmin from "./S6programmin";
 import S7designin from "./S7designin";
+import MiniFooter from "./MiniFooter";
 
 
 
@@ -33,6 +34,7 @@ function RestOfThePage() {
             <S5webDev/>
             <S6programmin/>
             <S7designin/>
+            <MiniFooter/>
         </>
     )
 }
