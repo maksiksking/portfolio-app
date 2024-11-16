@@ -1,8 +1,13 @@
 import '../css/styles.scss';
+import {useTranslation} from "react-i18next";
 
-import {useState} from "react";
+import React, {useState} from "react";
+import {Trans} from "react-i18next";
 
 function DesiLeft() {
+    const t = useTranslation();
+    // updater
+
     const [x, setX] = useState(1);
     const [pointer, setPointer] = useState("pointer");
     return (
@@ -19,22 +24,22 @@ function DesiLeft() {
             <rect x="184" y="317" width="99" height="8" fill="#2D2D2D"/>
             <text fill="black" style={{whiteSpace: "pre"}} font-family="Fredericka the Great"
                   font-size="50" letter-spacing="0em">
-                <tspan x="27" y="48.7373">Graphic, 3D, Art and &#10;</tspan>
-                <tspan x="27" y="109.737">miscellanious</tspan>
+                <tspan x="27" y="48.7373"><Trans i18nKey={"graphics.titleLine1"}></Trans> &#10;</tspan>
+                <tspan x="27" y="109.737"><Trans i18nKey={"graphics.titleLine2"}></Trans></tspan>
             </text>
-            <text fill="black" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="30"
+            <text className={"graphicsDescTxt"} fill="black" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="30"
                   letter-spacing="0em">
-                <tspan x="47" y="543.205">This is very far from every little tiny work of&#10;</tspan>
-                <tspan x="47" y="576.205">mine but, these are the very highlights.</tspan>
+                <tspan x="47" y="543.205"><Trans i18nKey={"graphics.descLine1"}></Trans>&#10;</tspan>
+                <tspan x="47" y="576.205"><Trans i18nKey={"graphics.descLine2"}></Trans></tspan>
             </text>
             <text fill="black" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="15"
                   letter-spacing="0em">
-                <tspan x="99.1025" y="387.352">which way is the bench facing?&#10;</tspan>
+                <tspan x="99.1025" y="387.352"><Trans i18nKey={"graphics.bench"}></Trans>&#10;</tspan>
                 <tspan x="198.346" y="404.353">( &#x361;&#xb0; &#x35c;&#x296; &#x361;&#xb0;)</tspan>
             </text>
             <text fill="black" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="15"
                   letter-spacing="0em">
-                <tspan x="200" y="432" style={{zIndex: 0}}>both&#10;</tspan>
+                <tspan x="200" y="432" style={{zIndex: 0}}><Trans i18nKey={"graphics.both"}></Trans>&#10;</tspan>
             </text>
             <rect className={"lilSpoiler"} onClick={() => {
                 setX(0) ; setPointer("initial")

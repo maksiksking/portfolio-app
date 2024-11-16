@@ -7,7 +7,7 @@ $breakpoints: (phone: 320px, phoneSE: 375px, tablet: 768px, desktop: 1024px);
 
 
 @include media(">phone", "<=tablet") {
-  $SNOWDROPS_LENGTH: 50;
+  $SNOWDROPS_LENGTH: 30;
 }
 
 .g-snows {

@@ -6,7 +6,10 @@ import Skills from './svgComps/s3/Skills'
 import BottomRect from "./aboutPageInsides/BottomRect";
 import RightPartInAbout from "./aboutPageInsides/RightPartInAbout";
 
+import {useTranslation} from "react-i18next";
+
 function S3about() {
+    const {t} = useTranslation();
     return (<section className={"s3about"}>
         <svg className={"blackLine0"} width="2.7vw" height="71vh" viewBox="0 0 4vw 71vh" fill="none"
              xmlns="http://www.w3.org/2000/svg">

@@ -4,6 +4,8 @@ import DevSvgLine from "../svgComps/DevSvgLine";
 import React from "react";
 import Snow from "../devInsides/Snow"
 
+import {useTranslation} from "react-i18next";
+
 // react doesnt wanna eat my path and make a video so I have to import them separately, so weird
 const mouseSpinVid: any = <video src={"vid/cursorRealForreal.mp4"} loop={true} muted={true} autoPlay={true} />
 const textLapserVid: any = <img className={"devVideoEven"} src={"vid/impostor.png"} alt={"impostor"}/>
@@ -78,36 +80,38 @@ function DistributeData(props: distributeDataProps) {
 }
 
 function DevSec(props: DevSecProps) {
+    const { t } = useTranslation();
+
     const data = [
         {
             id: "mouseSpin",
             video: mouseSpinVid,
-            title: "Yep. It just circles your cursor. That’s it.",
-            text: "My life before I made this script was completely different, now I can’t live without it. I don’t have ADHD or something but for some reason this works for my brain really well. I also managed to break the library in a very satisfying way",
+            title: t("dev.devSec1.title"),
+            text: t("dev.devSec1.desc"),
             githublnk: "https://github.com/maksiksking/Mouse-spinner",
             even: false
         },
         {
             id: "textLapser",
             video: textLapserVid,
-            title: "Text Lapser",
-            text: "A Discord bot that removes all messages that aren’t GIFs from channels specified in code.  Mostly me playing around with the Discord.py API alongside a few other simple bots for my private servers. Feel free to fork.",
+            title: t("dev.devSec2.title"),
+            text: t("dev.devSec2.desc"),
             githublnk: "https://github.com/maksiksking/TextLapserBot",
             even: true
         },
         {
             id: "opAp",
             video: opApVid,
-            title: "OpenAI API implementation",
-            text: "The back-end for this website was actually made in Python, with Pyodide to make the utilization of the ChatGPT API a little easier. Also gave me some nice experience with the API.",
+            title: t("dev.devSec3.title"),
+            text: t("dev.devSec3.desc"),
             githublnk: "https://github.com/maksiksking/AI-emojify",
             even: false
         },
         {
             id: "teaMod",
             video: teaModVid,
-            title: "Teamod",
-            text: "Yup, just a Minecraft tea mod. Has a fair bit of content even if creative only. There are lots of different teas, and some of them even have certain effects, like nausea or ... vein miner. It's unfinished but it's pretty wild.",
+            title: t("dev.devSec4.title"),
+            text: t("dev.devSec4.desc"),
             githublnk: "https://github.com/maksiksking/tea-mod",
             even: true
         }

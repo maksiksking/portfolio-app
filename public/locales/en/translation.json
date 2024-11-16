@@ -1,0 +1,68 @@
+{
+  "aboutMeTitle": "About Me",
+  "aboutMeDesc": {
+    "line1": "I’m hardly a your average person.",
+    "line2": "I do a lot of stuff. I can’t stop even if it hurts.",
+    "line3": "You could take that as a good thing but, I guess",
+    "line4": "that just shows that I’m not happy, doesn’t it?"
+  },
+  "attributes": {
+    "names": ["Age:", "Pronouns:", "Occupation:", "Nationality:", "Favorite Metal:", "Alone:"],
+    "values": ["17", "he/him", "student", "Ukrainian", "Lead", "Alone"]
+  },
+  "languagesTitle": "Languages",
+  "languagesDesc": {
+    "lang1": "English",
+    "lang2": "Ukrainian",
+    "lang3": "Japanese",
+    "learning": "^ (learning)",
+    "level1": "Fluent",
+    "level2": "Native",
+    "level3": "N3/N4~"
+  },
+
+  "_comment": "the paragraphs don't need translations, 4 am Maksiks don't you dare forget",
+
+  "skillsTitle": "Skills",
+  "skillsDesc": {
+    "webDevTitle": "Web-dev",
+    "digitalArtTitle": "Digital art",
+    "devTitle": "Dev",
+    "graphicDesignTitle": "Graphic design",
+    "videoEditingTitle": "Editing / Motion ",
+    "andMoreTitle": "And more..."
+  },
+
+  "dev": {
+    "devSec1": {
+      "title": "Yep. It just circles your cursor. That’s it.",
+      "desc": "My life before I made this script was completely different, now I can’t live without it. I don’t have ADHD or something but for some reason this works for my brain really well. I also managed to break the library in a very satisfying way"
+    },
+    "devSec2": {
+      "title": "Text Lapser",
+      "desc": "A Discord bot that removes all messages that aren’t GIFs from channels specified in code.  Mostly me playing around with the Discord.py API alongside a few other simple bots for my private servers. Feel free to fork.\n\nGithub #"
+    },
+
+    "devSec3": {
+      "title": "OpenAI API implementation",
+      "desc": "The back-end for this website was actually made in Python, with Pyodide to make the utilization of the ChatGPT API a little easier. Also gave me some nice experience with the API.\n"
+    },
+
+    "devSec4": {
+      "title": "Teamod",
+      "desc": "Yup, just a Minecraft tea mod. Has a fair bit of content even if creative only. There are lots of different teas, and some of them even have certain effects, like nausea or ... vein miner. It's unfinished but it's pretty wild."
+    },
+
+    "gitTxt": "Of course there's more on my"
+  },
+
+  "graphics": {
+    "titleLine1": "Design, 3D, art and",
+    "titleLine2": "miscellaneous",
+    "bench": "which way is the bench facing?",
+    "both": "both",
+    "descLine1": "This is very far from every little tiny work of",
+    "descLine2": "mine but, these are the very highlights."
+  }
+
+}

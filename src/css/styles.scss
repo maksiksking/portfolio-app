@@ -216,7 +216,7 @@ body {
     height: 57vh;
 
     @include media(">phone", "<=tablet") {
-      height: 27vh;
+      height: 24vh;
     }
   }
 
@@ -614,10 +614,20 @@ $progBgActualWidth: 100 vw-0 .5vw;
         border: black 3px solid;
 
         margin-left: 33%;
+
+        @include media(">phone", "<=tablet") {
+          width: 90%;
+          margin-left: 4%;
+        }
       }
 
       .devVideoEven {
         margin-left: 4.5vw;
+
+        @include media(">phone", "<=tablet") {
+          width: 90%;
+          margin-left: 4%;
+        }
       }
 
       img {
@@ -629,6 +639,11 @@ $progBgActualWidth: 100 vw-0 .5vw;
         border: black 3px solid;
 
         margin-left: 33%;
+
+        @include media(">phone", "<=tablet") {
+          width: 90%;
+          margin-left: 4%;
+        }
       }
 
       .devSecTxtContainer {
@@ -948,5 +963,17 @@ $progBgActualWidth: 100 vw-0 .5vw;
   @include media(">phoneSE", "<=tablet") {
     display: none;
 
+  }
+}
+
+.flag {
+  background-color: white;
+  color: transparent;
+  background-clip: text;
+}
+
+.graphicsDescTxt {
+  @include media(">phone", "<=tablet") {
+    transform: translate(-15px, 0);
   }
 }

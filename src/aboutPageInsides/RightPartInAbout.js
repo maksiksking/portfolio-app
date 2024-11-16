@@ -2,9 +2,13 @@ import React from "react";
 import '../css/styles.scss';
 import RightPFPWidget from "./RightPFPWidget";
 
+import { useTranslation } from "react-i18next";
+
 import {useTrail, useInView, animated, useSpring} from "@react-spring/web";
 
 function RightPart() {
+    const { t } = useTranslation();
+
     const buildInteractionObserverThreshold = (count = 100) => {
         const threshold = []
 
@@ -46,11 +50,23 @@ function RightPart() {
         {id: "alone1", name: "alone:", value: "alone"},
     ]
 
+    const translatedAttributes = t('attributes', { returnObjects: true });
+    const names = translatedAttributes.names || [];
+    const values = translatedAttributes.values || [];
+
+    console.log(values[0]);
+
+    const combinedAttributes = names.map((name, index) => ({
+        name,
+        value: values[index] || '',
+    }));
+
+    console.log(combinedAttributes);
 
     return (
         <div className={"s3rightCont"}>
             <ul>
-                {attributes.map((att) => <ProfileAttribute key={att.id} name={att.name}/>)}
+                {combinedAttributes.map((att) => <ProfileAttribute key={att.id} name={att.name}/>)}
             </ul>
             <svg className={"modernArt"} width="5" height="502" viewBox="0 0 5 502" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
@@ -65,7 +81,7 @@ function RightPart() {
                 <rect width="5" height="358" rx="2.5" fill="#212121"/>
             </svg>
             <ul>
-                {attributes.map((att) => <ProfileAttribute key={att.name} name={att.value}/>)}
+                {combinedAttributes.map((att) => <ProfileAttribute key={att.name} name={att.value}/>)}
             </ul>
             <RightPFPWidget/>
         </div>

@@ -5,6 +5,7 @@ import './css/snow.scss';
 import ProgramminBg from "./svgComps/s6/ProgramminBg";
 import DevSec from "./devInsides/DevSec.tsx";
 import {useSpring} from '@react-spring/web';
+import {Trans} from "react-i18next";
 
 function S6programmin() {
     const [springs, api] = useSpring(() => ({
@@ -32,8 +33,6 @@ function S6programmin() {
     return (<section onMouseMove={moveSnow} onMouseOut={() => {
         console.log("in check")
     }} className={"s6programmin"}>
-
-
         <div  className={"innerProgCont"}>
             <div className={"coverUp"}></div>
             <h2 className={"devTxt progCaretCont"}>
@@ -42,7 +41,7 @@ function S6programmin() {
             </h2>
             <div className={"devSecContainer"}>
                 <DevSec sp={springs}/>
-                <p className={"gitPlug"}>Of course there's more on my <a target={"_blank"} rel="noreferrer" href={"https://github.com/maksiksking"}><br/>Github #</a></p>
+                <p className={"gitPlug"}><Trans i18nKey={"dev.gitTxt"}></Trans> <a target={"_blank"} rel="noreferrer" href={"https://github.com/maksiksking"}><br/>Github #</a></p>
             </div>
         </div>
         <ProgramminBg/>

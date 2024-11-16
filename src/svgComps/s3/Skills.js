@@ -1,6 +1,7 @@
 import React, {useRef} from "react";
 import '../../css/styles.scss';
 import {useInView, useSpring, animated} from "@react-spring/web";
+import {Trans} from "react-i18next";
 
 // Notice: The text is IN the SVG in a <text>! Because it's imported from Figma with
 // Outline Text disabled to keep it SEO, copyable and to save some time
@@ -106,9 +107,9 @@ function Skills() {
                     d="M390.757 133.243C393.101 130.899 396.899 130.899 399.243 133.243L410.757 144.757C413.101 147.101 413.101 150.899 410.757 153.243L399.243 164.757C396.899 167.101 393.101 167.101 390.757 164.757L379.243 153.243C376.899 150.899 376.899 147.101 379.243 144.757L390.757 133.243Z"
                     fill="white"/>
                 <text fill="white" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="90"
-                      letter-spacing="0em"><tspan x="40" y="139.115">Skills</tspan></text>
+                      letter-spacing="0em"><tspan x="40" y="139.115"><Trans i18nKey={"skillsTitle"}></Trans></tspan></text>
                 <text fill="white" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="40"
-                      letter-spacing="0em"><tspan x="81" y="256.44">Web-dev</tspan></text>
+                      letter-spacing="0em"><tspan x="81" y="256.44"><Trans i18nKey={"skillsDesc.webDevTitle"}></Trans></tspan></text>
                 <text fill="white" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="28"
                       letter-spacing="0em"><tspan x="81" y="302.558">&#62; HTML, CSS, JS, React,&#10;</tspan>
                         <tspan x="81" y="333.558">Node, Figma, Photoshop,&#10;</tspan>
@@ -127,29 +128,29 @@ function Skills() {
                 <text fill="white" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="28"
                       letter-spacing="0em"><tspan x="574" y="451.558">&#62; Premiere Pro, AfterFX</tspan></text>
                 <text fill="white" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="28"
-                      letter-spacing="0em"><tspan x="574" y="541.558">&#62; AfterFX</tspan></text>
+                      letter-spacing="0em"><tspan x="574" y="541.558">&#62; ...</tspan></text>
                 <text fill="white" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="28"
                       letter-spacing="0em"><tspan x="83" y="527.558">&#62; Photoshop, Aseprite</tspan></text>
                 <text fill="white" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="50"
                       letter-spacing="0em"><tspan x="48" y="258.175">&#xd7;</tspan></text>
                 <text fill="white" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="40"
-                      letter-spacing="0em"><tspan x="574" y="102.44">Dev</tspan></text>
+                      letter-spacing="0em"><tspan x="574" y="102.44"><Trans i18nKey={"skillsDesc.devTitle"}></Trans></tspan></text>
                 <text fill="white" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="50"
                       letter-spacing="0em"><tspan x="541" y="106.175">&#xd7;</tspan></text>
                 <text fill="white" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="40"
-                      letter-spacing="0em"><tspan x="575" y="285.44">Graphic design</tspan></text>
+                      letter-spacing="0em"><tspan x="575" y="285.44"><Trans i18nKey={"skillsDesc.graphicDesignTitle"}></Trans></tspan></text>
                 <text fill="white" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="50"
                       letter-spacing="0em"><tspan x="542" y="289.175">&#xd7;</tspan></text>
                 <text fill="white" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="40"
-                      letter-spacing="0em"><tspan x="81" y="481.44">Digital art</tspan></text>
+                      letter-spacing="0em"><tspan x="81" y="481.44"><Trans i18nKey={"skillsDesc.digitalArtTitle"}></Trans></tspan></text>
                 <text fill="white" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="50"
                       letter-spacing="0em"><tspan x="48" y="485.175">&#xd7;</tspan></text>
                 <text fill="white" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="40"
-                      letter-spacing="0em"><tspan x="574" y="414.44">Video editing</tspan></text>
+                      letter-spacing="0em"><tspan x="574" y="414.44"><Trans i18nKey={"skillsDesc.videoEditingTitle"}></Trans></tspan></text>
                 <text fill="white" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="50"
                       letter-spacing="0em"><tspan x="541" y="418.175">&#xd7;</tspan></text>
                 <text fill="white" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="40"
-                      letter-spacing="0em"><tspan x="574" y="501.44">Motion graphics</tspan></text>
+                      letter-spacing="0em"><tspan x="574" y="501.44"><Trans i18nKey={"skillsDesc.andMoreTitle"}></Trans></tspan></text>
                 <text fill="white" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="50"
                       letter-spacing="0em"><tspan x="541" y="505.175">&#xd7;</tspan></text>
         </animated.svg>

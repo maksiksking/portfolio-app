@@ -1,9 +1,13 @@
-import {useState, React} from "react";
+import {useState, React, useEffect} from "react";
 import './css/styles.scss';
 
 import {animated, useSpring} from "@react-spring/web";
 
 import Illu from "./iniInsides/Illu";
+
+import i18n from './i18n';
+import {useTranslation} from "react-i18next";
+import i18next from "i18next";
 
 
 function S1ini() {
@@ -38,6 +42,9 @@ function S1ini() {
                 y: Math.floor(Math.random() * 150),
             },
         })
+    }
+    function onMove1() {
+        if (!check) return;
         api1.start({
             from: {}, to: {
                 x: Math.floor(Math.random() * 10),
@@ -48,6 +55,9 @@ function S1ini() {
 
     function onHold() {
         api.stop()
+        setCheck(false);
+    }
+    function onHold1() {
         api1.stop()
         setCheck(false);
     }
@@ -59,6 +69,40 @@ function S1ini() {
     document.addEventListener('mousemove', startUp);
 
 
+    const [flagUa, setFlagUa] = useState("#ffffff");
+    const [flagGb, setFlagGb] = useState("#bfccb8");
+    const [switcher, setSwitcher] = useState(true);
+
+    useEffect(() => {
+        const lang = i18next.language || window.localStorage.i18nextLng;
+        if (lang === "en") {
+            setSwitcher(true)
+            setFlagUa("#bfccb8")
+            setFlagGb("#ffffff")
+        } else {
+            setSwitcher(false)
+            setFlagUa("#ffffff")
+            setFlagGb("#bfccb8")
+        }
+    }, []);
+
+    function changeLang() {
+        if (switcher) {
+            i18n.changeLanguage("en")
+            console.log("hello")
+            setFlagUa("#bfccb8")
+            setFlagGb("#ffffff")
+            setSwitcher(false);
+        } else {
+            i18n.changeLanguage("uk")
+            setFlagUa("#ffffff")
+            setFlagGb("#bfccb8")
+            setSwitcher(true);
+
+        }
+    }
+
+
     return (
         <section className={"s1ini flex-to-mid"}>
             <Illu></Illu>
@@ -66,7 +110,10 @@ function S1ini() {
                           className={"iniHWrap"}>
                 <h1 className={"iniH1"}>Maksiks</h1>
             </animated.div>
-
+            <animated.div onClick={changeLang} onMouseDown={onHold1} onMouseUp={startUp} onMouseMove={onMove1} style={{...springs1}}
+                          className={"iniHWrap iniLangWrap"}>
+                <p className={"iniH1"}><span style={{backgroundColor: flagUa}} className={"flag"}>Uk</span> / <span style={{backgroundColor: flagGb}} className={"flag"}>En</span></p>
+            </animated.div>
         </section>
     )
 }

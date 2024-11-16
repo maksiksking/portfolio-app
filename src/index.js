@@ -11,6 +11,8 @@ import { useState, useEffect } from "react";
 import ReactDOM from 'react-dom/client';
 import './css/styles.scss';
 
+import './i18n';
+
 import S1ini from './S1ini.js';
 import S2now from './S2now.js';
 import LightBox from "./LightBox";
