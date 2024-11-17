@@ -57,6 +57,20 @@ function S5webDev() {
                 borderWidth: "3px",
                 borderImageSource: "linear-gradient(to left, #743ad5, #d53a9d)",
             }} className={"webBgSquare"}></div>
+            <div style={{
+                border: "3px solid",
+                borderImageSlice: "1",
+                borderWidth: "3px",
+                borderImageSource: "linear-gradient(to left, #743ad5, #d53a9d)",
+                opacity: 0.8,
+            }} className={"webBgSquare"}></div>
+            <div style={{
+                border: "3px solid",
+                borderImageSlice: "1",
+                borderWidth: "3px",
+                borderImageSource: "linear-gradient(to left, #743ad5, #d53a9d)",
+                opacity: 0.4,
+            }} className={"webBgSquare"}></div>
         </div>
 
         <AllEmBoxes/>

@@ -5,11 +5,6 @@ $SNOWDROPS_LENGTH: 100;
 
 $breakpoints: (phone: 320px, phoneSE: 375px, tablet: 768px, desktop: 1024px);
 
-
-@include media(">phone", "<=tablet") {
-  $SNOWDROPS_LENGTH: 30;
-}
-
 .g-snows {
   position: absolute;
   overflow: visible;
@@ -60,19 +55,42 @@ $breakpoints: (phone: 320px, phoneSE: 375px, tablet: 768px, desktop: 1024px);
 
   //$rotation: 90
 
-  @for $i from 1 through $SNOWDROPS_LENGTH {
-    $size: abs(random($snow-size-base) - random($snow-size-base)) + 0px;
+  // responsive
+  @media (min-width: 320px) and (max-width: 768px) {
+    $SNOWDROPS_LENGTH: 30;
+    @for $i from 1 through $SNOWDROPS_LENGTH {
+      $size: abs(random($snow-size-base) - random($snow-size-base)) + 0px;
 
-    &:nth-child(#{$i}) {
-      left: abs(random($left-position) - random($left-position)) + 0%;
-      rotate: abs(random($rotation-base) - random($rotation-base)) + 0deg;
-      width: $size;
-      height: $size;
-      animation-duration: abs(random($animate-speed-base) - random($animate-speed-base)) + $minimum-falling-speed + 0ms;
-      animation-delay: abs(random($animate-delay-base)) + 0ms;
-      filter: blur(abs(random($blur-base) - random($blur-base)) + 0px);
+      &:nth-child(#{$i}) {
+        left: abs(random($left-position) - random($left-position)) + 0%;
+        rotate: abs(random($rotation-base) - random($rotation-base)) + 0deg;
+        width: $size;
+        height: $size;
+        animation-duration: abs(random($animate-speed-base) - random($animate-speed-base)) + $minimum-falling-speed + 0ms;
+        animation-delay: abs(random($animate-delay-base)) + 0ms;
+        filter: blur(abs(random($blur-base) - random($blur-base)) + 0px);
+      }
     }
   }
+
+  @include media(">desktop") {
+    @for $i from 1 through $SNOWDROPS_LENGTH {
+      $size: abs(random($snow-size-base) - random($snow-size-base)) + 0px;
+
+      &:nth-child(#{$i}) {
+        left: abs(random($left-position) - random($left-position)) + 0%;
+        rotate: abs(random($rotation-base) - random($rotation-base)) + 0deg;
+        width: $size;
+        height: $size;
+        animation-duration: abs(random($animate-speed-base) - random($animate-speed-base)) + $minimum-falling-speed + 0ms;
+        animation-delay: abs(random($animate-delay-base)) + 0ms;
+        filter: blur(abs(random($blur-base) - random($blur-base)) + 0px);
+      }
+    }
+  }
+
+
+
 }
 
 @keyframes snow-drop {

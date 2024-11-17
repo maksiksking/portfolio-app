@@ -1,4 +1,4 @@
-import React, {memo, useState} from 'react';
+import React, {memo, useRef, useState} from 'react';
 import '../css/styles.scss';
 import {animated, useSpring} from '@react-spring/web';
 
@@ -29,20 +29,22 @@ function AllEmBoxes() {
         })
     }
 
-    const futureVid = <video className={"corVid"} src={"../vid/webdvid1.mp4"} loop muted autoPlay={true}>
+    const videoRef = useRef(null);
+
+
+    const futureVid = <video ref={videoRef} className={"corVid"} src={"../vid/webdvid1.mp4"} loop muted autoPlay={true}>
     </video>
-    const teaVid = <video className={"corVid"} src={"../vid/webdvid2.mp4"} loop muted autoPlay={true}>
+    const teaVid = <video ref={videoRef} className={"corVid"} src={"../vid/webdvid2.mp4"} loop muted autoPlay={true}>
     </video>
-    const hereVid = <video className={"corVid"} src={"../vid/webdvid3.mp4"} loop muted autoPlay={true}>
+    const hereVid = <video ref={videoRef} className={"corVid"} src={"../vid/webdvid3.mp4"} loop muted autoPlay={true}>
     </video>
-    const bwkittyVid = <video className={"corVid"} src={"../vid/webdvid4.mp4"} loop muted autoPlay={true}>
+    const bwkittyVid = <video ref={videoRef} className={"corVid"} src={"../vid/webdvid4.mp4"} loop muted autoPlay={true}>
     </video>
-    const oldfolioVid = <video className={"corVid"} src={"../vid/webdvid5.mp4"} loop muted autoPlay={true}>
+    const oldfolioVid = <video ref={videoRef} className={"corVid"} src={"../vid/webdvid5.mp4"} loop muted autoPlay={true}>
     </video>
-    const aieEmojifyVid = <video className={"corVid"} src={"../vid/webdvid6.mp4"} loop muted autoPlay={true}>
+    const aieEmojifyVid = <video ref={videoRef} className={"corVid"} src={"../vid/webdvid6.mp4"} loop muted autoPlay={true}>
     </video>
-    const clickTheCityCommisionVid = <video className={"corVid"} src={"../vid/webdvid7.mp4"} loop muted
-                                            autoPlay={true}>
+    const clickTheCityCommisionVid = <video ref={videoRef} className={"corVid"} src={"../vid/webdvid7.mp4"} loop muted autoPlay={true}>
     </video>
 
 
@@ -80,9 +82,7 @@ function AllEmBoxes() {
 
 
     function GridDataBake(props) {
-        console.log(props.link)
         if (props.link === "nope") {
-            console.log("yup")
             return (
                 <animated.div className={"wdiv wdiv" + String(props.ids)}
                               key={props.id}
