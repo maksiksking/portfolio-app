@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {memo, useState} from 'react';
 import '../css/styles.scss';
 import {animated, useSpring} from '@react-spring/web';
 
@@ -47,7 +47,15 @@ function AllEmBoxes() {
 
 
     let gridData = [
-        {id: 1, a1: 1, a2: 1, a3: 2, a4: 3, vid: futureVid, link: "https://maksiksking.github.io/futureOfUkraineWebDesignCompetition2023h1/"},
+        {
+            id: 1,
+            a1: 1,
+            a2: 1,
+            a3: 2,
+            a4: 3,
+            vid: futureVid,
+            link: "https://maksiksking.github.io/futureOfUkraineWebDesignCompetition2023h1/"
+        },
         {id: 2, a1: 1, a2: 3, a3: 2, a4: 6, vid: teaVid, link: "https://course-site-f.vercel.app/#"},
         {id: 3, a1: 2, a2: 1, a3: 3, a4: 3, vid: hereVid, link: "nope"},
         {id: 4, a1: 2, a2: 3, a3: 3, a4: 5, vid: bwkittyVid, link: "https://b-w-kitty-maksiksed.vercel.app/"},
@@ -77,8 +85,8 @@ function AllEmBoxes() {
             console.log("yup")
             return (
                 <animated.div className={"wdiv wdiv" + String(props.ids)}
-                            key={props.id}
-                            style={{gridArea: String(props.a1) + "/" + String(props.a2) + "/" + String(props.a3) + "/" + String(props.a4), ...springs,}}>
+                              key={props.id}
+                              style={{gridArea: String(props.a1) + "/" + String(props.a2) + "/" + String(props.a3) + "/" + String(props.a4), ...springs,}}>
                     {props.vid}
                 </animated.div>
             )
@@ -90,16 +98,36 @@ function AllEmBoxes() {
         </animated.a>;
     }
 
+    const gradientStyles = useSpring({
+        config: {duration: 5000},
+        loop: {reverse: true},
+        from: {
+            background: "linear-gradient(to left, #d53a9d, #743ad5)",
+        },
 
-    return (<div className="allEmWrapper flex-to-mid">
-            <div className={"allEmBoxes"}>
-                {boxes.map((box) => <GridDataBake key={box.id} ids={box.id} a1={box.a1} a2={box.a2} a3={box.a3}
-                                                  a4={box.a4} vid={box.vid} link={box.link}/>)}
-            </div>
+        to: {
+            background: "linear-gradient(to left, #743ad5, #d53a9d)",
+        }
+    });
+
+    return (
+        <div className={"allEmDoubleWrapper"}>
+            <animated.div style={{
+                paddingTop: "5.3vh",
+                paddingBottom: "5.3vh",
+                paddingLeft: "0.3vh",
+                paddingRight: "0.3vh",
+                ...gradientStyles,
+            }} className="allEmWrapper flex-to-mid">
+                <div className={"allEmBoxes"}>
+                    {boxes.map((box) => <GridDataBake key={box.id} ids={box.id} a1={box.a1} a2={box.a2} a3={box.a3}
+                                                      a4={box.a4} vid={box.vid} link={box.link}/>)}
+                </div>
+            </animated.div>
         </div>
     )
 
 
 }
 
-export default AllEmBoxes;
+export default memo(AllEmBoxes);

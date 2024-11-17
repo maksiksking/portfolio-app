@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Fredericka+the+Great&family=Karla:ital,wght@0,200..800;1,200..800&family=Tiny5&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Fredericka+the+Great&family=Karla:ital,wght@0,200..800;1,200..800&family=Lunasima:wght@400;700&family=Tiny5&display=swap');
 @import "include-media.scss";
 
 $scrollBarWidth: 0.65vw;
@@ -23,6 +23,12 @@ $breakpoints: (phone: 320px, phoneSE: 375px, tablet: 768px, desktop: 1024px);
 @mixin comfortaa {
   font-family: "Comfortaa", serif;
   font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin lunasima {
+  font-family: "Lunasima", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -371,7 +377,7 @@ body {
     margin-top: 20vh;
 
     .webDevHeader {
-      @include comfortaa;
+      @include lunasima;
       color: white;
 
       margin-left: 2.5vw;
@@ -387,54 +393,76 @@ body {
     }
   }
 
-  .allEmWrapper {
+  .allEmDoubleWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10vw;
+
     height: 0;
     width: 100vw;
 
-
-    .allEmBoxes {
+    .allEmWrapper {
       width: 80vw;
       height: 175vh;
-      margin-top: 20vh;
 
-      display: grid;
-      overflow-x: clip;
-      grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      grid-column-gap: 22px;
-      grid-row-gap: 12px;
+      .allEmBoxes {
+        width: 100%;
+        height: 100%;
 
-      border-radius: 6px;
-      background-color: #1e1e1e;
-      padding: 5vh;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 
-      @include media(">phone", "<=tablet") {
-        margin-top: 2vh;
-      }
+        display: grid;
+        overflow-x: clip;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 22px;
+        grid-row-gap: 12px;
 
-      div {
-        cursor: initial !important;
-      }
+        background-color: #1e1e1e;
+        padding: 5vh;
 
-
-      a, div {
-        cursor: url("../img/cursor1.png"), auto;
-
-        height: 5%;
-
-        video {
-
-          width: 100%;
-          height: 55.3vh;
-          object-fit: cover;
-          clip-path: inset(20px 0 20px 0);
-
+        @include media(">phone", "<=tablet") {
+          margin-top: 2vh;
         }
-      }
 
-      // more in the component cuz variables
+        div {
+          cursor: initial !important;
+        }
+
+
+        a, div {
+          width: 100%;
+
+          box-shadow: rgba(94,0,170,0.4) -5px 5px, rgba(96,0,198,0.3) -10px 10px, rgba(116,0,225,0.2) -15px 15px, rgba(130,0,237,0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+          cursor: url("../img/cursor1.png") 40 4, pointer;
+
+          height: 100%;
+          transition: all 3s ease;
+
+          video {
+
+            width: 100%;
+            height: 55.3vh;
+            object-fit: cover;
+            clip-path: inset(20px 0 20px 0);
+
+          }
+        }
+
+        .a:not(:hover), div:not(:hover){
+          box-shadow: rgba(94,0,170,0.4) -5px 5px, rgba(96,0,198,0.3) -10px 10px, rgba(116,0,225,0.2) -15px 15px, rgba(130,0,237,0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+        }
+
+        a:hover, div:hover {
+          box-shadow: rgba(230,0,214,0.4) -5px 5px, rgba(198,0,188,0.3) -10px 10px, rgba(210,0,225,0.2) -15px 15px, rgba(237,0,225,0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+        }
+
+        // more in the component cuz variables
+      }
     }
   }
+
 }
 
 .wdiv1 {
@@ -997,4 +1025,27 @@ $progBgActualWidth: 100 vw-0 .5vw;
   .footerRight {
     margin-left: auto;
   }
+}
+
+.webBg {
+  width: 100%;
+  height: 300vh;
+  overflow: hidden;
+  position: absolute;
+  .webBgSquare {
+    position: absolute;
+    z-index: 0;
+    background-color: #1e1e1e;
+
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
+
+  .webBgSquare:nth-child(1) {
+    margin-top: 80%;
+    margin-left: -4%;
+    width: 9vw;
+    height: 9vw;
+  }
+
 }
