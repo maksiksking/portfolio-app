@@ -5,9 +5,11 @@ import RightPFPWidget from "./RightPFPWidget";
 import { useTranslation } from "react-i18next";
 
 import {useTrail, useInView, animated, useSpring} from "@react-spring/web";
+import i18next from "i18next";
 
 function RightPart() {
     const { t } = useTranslation();
+    const getLanguage = () => i18next.language || window.localStorage.i18nextLng
 
     const buildInteractionObserverThreshold = (count = 100) => {
         const threshold = []
@@ -29,6 +31,8 @@ function RightPart() {
 
 
     const styles = useSpring({
+        fontSize: getLanguage()==="uk"  ? "1.5rem" : "1.8rem",
+        // extra bit for translation ^
         scale: isInView ? 1 : 0,
         config: {
             tension: 300,
