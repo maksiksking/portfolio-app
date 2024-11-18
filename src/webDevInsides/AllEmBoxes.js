@@ -32,19 +32,19 @@ function AllEmBoxes() {
     const videoRef = useRef(null);
 
 
-    const futureVid = <video ref={videoRef} className={"corVid"} src={"../vid/webdvid1.mp4"} loop muted autoPlay={true}>
+    const futureVid = <video ref={videoRef} className={"corVid"} src={"../vid/webdvid1.webm"} loop muted autoPlay={true}>
     </video>
-    const teaVid = <video ref={videoRef} className={"corVid"} src={"../vid/webdvid2.mp4"} loop muted autoPlay={true}>
+    const teaVid = <video ref={videoRef} className={"corVid"} src={"../vid/webdvid2.webm"} loop muted autoPlay={true}>
     </video>
-    const hereVid = <video ref={videoRef} className={"corVid"} src={"../vid/webdvid3.mp4"} loop muted autoPlay={true}>
+    const hereVid = <video ref={videoRef} className={"corVid"} src={"../vid/webdvid3.webm"} loop muted autoPlay={true}>
     </video>
-    const bwkittyVid = <video ref={videoRef} className={"corVid"} src={"../vid/webdvid4.mp4"} loop muted autoPlay={true}>
+    const bwkittyVid = <video ref={videoRef} className={"corVid"} src={"../vid/webdvid4.webm"} loop muted autoPlay={true}>
     </video>
-    const oldfolioVid = <video ref={videoRef} className={"corVid"} src={"../vid/webdvid5.mp4"} loop muted autoPlay={true}>
+    const oldfolioVid = <video ref={videoRef} className={"corVid"} src={"../vid/webdvid5.webm"} loop muted autoPlay={true}>
     </video>
-    const aieEmojifyVid = <video ref={videoRef} className={"corVid"} src={"../vid/webdvid6.mp4"} loop muted autoPlay={true}>
+    const aieEmojifyVid = <video ref={videoRef} className={"corVid"} src={"../vid/webdvid6.webm"} loop muted autoPlay={true}>
     </video>
-    const clickTheCityCommisionVid = <video ref={videoRef} className={"corVid"} src={"../vid/webdvid7.mp4"} loop muted autoPlay={true}>
+    const clickTheCityCommisionVid = <video ref={videoRef} className={"corVid"} src={"../vid/webdvid7.webm"} loop muted autoPlay={true}>
     </video>
 
 

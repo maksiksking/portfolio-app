@@ -1,4 +1,6 @@
 import {useState, React, useEffect} from "react";
+
+import useCheckIfMobile from "./useCheckIfMobile";
 import './css/styles.scss';
 
 import {animated, useSpring} from "@react-spring/web";
@@ -33,9 +35,10 @@ function S1ini() {
         }
     }));
 
+    const mobileCheck = useCheckIfMobile();
 
     function onMove() {
-        if (!check) return;
+        if (!check || mobileCheck) return;
         api.start({
             from: {}, to: {
                 x: Math.floor(Math.random() * 150),
@@ -101,6 +104,7 @@ function S1ini() {
 
         }
     }
+
 
 
     return (
