@@ -7,8 +7,8 @@
     "line4": "that just shows that I’m not happy, doesn’t it?"
   },
   "attributes": {
-    "names": ["Age:", "Pronouns:", "Occupation:", "Nationality:", "Favorite Metal:", "Alone:"],
-    "values": ["17", "he/him", "student", "Ukrainian", "Lead", "Alone"]
+    "names": ["Age:", "Pronouns:", "Occupation:", "Nationality:", "Favorite metal:", "Fav. artist:"],
+    "values": ["17", "he/him", "student", "Ukrainian", "lead", "Mekaloton"]
   },
   "languagesTitle": "Languages",
   "languagesDesc": {
