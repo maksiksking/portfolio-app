@@ -45,7 +45,7 @@ function Page() {
         document.title = 'Maksiks';
     }, []);
 
-    return (<RecoilRoot>
+    return (<RecoilRoot translate="no">
         <S1ini/>
         {/*<S2now sendPass={sendPass}/>*/}
         <RestOfThePage/>
