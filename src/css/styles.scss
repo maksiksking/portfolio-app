@@ -210,6 +210,9 @@ body {
 
   display: flex;
   //flex-wrap: wrap; // how
+  @include media(">phone", "<=tablet") {
+    flex-wrap: wrap;
+  }
   flex-direction: row;
 
   .bottomRect {
@@ -232,6 +235,7 @@ body {
       height: 57vh;
 
       @include media(">phone", "<=tablet") {
+        margin-left: -70.8vw;
         height: 24vh;
       }
     }
@@ -833,6 +837,11 @@ $progBgActualWidth: 100 vw-0 .5vw;
     justify-content: center;
     align-items: center;
     border-left: black solid 3px;
+
+    @include media(">phone", "<=tablet") {
+      border-left: unset;
+    }
+
     .desiRight {
       width: 100%;
 
@@ -864,7 +873,8 @@ $progBgActualWidth: 100 vw-0 .5vw;
       @include media(">phoneSE", "<=tablet") {
         border-left: unset;
         padding-top: 8vh;
-        padding-left: 24vw;
+        margin-left: 4vw;
+
         background-color: initial;
         background-attachment: initial;
       }
