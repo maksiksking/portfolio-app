@@ -301,6 +301,16 @@ body {
       object-fit: contain;
     }
   }
+
+  // cringe laptop resolution specific cuz just in case
+  @media only screen and (width: 1440px) {
+    .s3rightCont {
+      margin-top: -12vh;
+      margin-left: 40vw;
+      padding: 5vw;
+    }
+  }
+
 }
 
 .s4holder {
