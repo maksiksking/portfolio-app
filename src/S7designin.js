@@ -9,9 +9,12 @@ function S7designin() {
         <div className={"desiLeft"}>
             <DesiLeft/>
         </div>
-        <div className={"desiRight"}>
-            <DesiRight/>
+        <div className={"desiRightWrap"}>
+            <div className={"desiRight"}>
+                <DesiRight/>
+            </div>
         </div>
+
     </section>)
 }
 
