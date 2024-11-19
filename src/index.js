@@ -22,6 +22,7 @@ import S5webDev from "./S5webDev";
 import S6programmin from "./S6programmin";
 import S7designin from "./S7designin";
 import MiniFooter from "./MiniFooter";
+import {a} from "@react-spring/web";
 
 
 
@@ -39,6 +40,14 @@ function RestOfThePage() {
     )
 }
 
+
+function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+        width,
+        height
+    };
+}
 
 function Page() {
     useEffect(() => {

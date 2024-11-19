@@ -10,7 +10,9 @@ function S1ini() {
     return (
 
         <div className={"iniIllusion"}>
-            <animated.img style={{
+            <animated.img  style={{
+                width: "40.125vw",
+                height: "42.125vw",
                 rotate: scrollYProgress.to((progress) => {
                     const pageHeight = window.innerHeight;
                     return progress * pageHeight * 2;
@@ -18,6 +20,8 @@ function S1ini() {
             }} className={"iniIllu1"} src={"/img/illu1.png"}  alt={"cool illusion p 1"}/>
             {/*one day i'll try out an inline css library, one day*/}
             <animated.img style={{
+                width: "40.325vw",
+                height: "42.125vw",
                 left: scrollYProgress.to((progress) => {
                     const pageHeight = window.innerHeight;
                     const pageWidth = window.innerWidth;

@@ -97,12 +97,9 @@ html, body {
   }
 
 
-  zoom: 125%;
-  @media only screen and (width: 1440px) {
-    zoom: 100%;
-  }
-  @media only screen and (width: 1536px) {
-    zoom: 100%;
+  zoom: 1.025;
+  @media only screen and (width: 1229px) {
+    zoom: 1;
   }
 }
 
@@ -147,7 +144,11 @@ body {
     padding: 0.2vw 1vw;
     color: white;
     z-index: 2;
-    font-size: 4rem;
+    font-size: 5rem;
+    @media only screen and (width: 1536px) {
+      font-size: 4rem;
+    }
+
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 35px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
   }
@@ -317,10 +318,10 @@ body {
   // oh wait that's my resolution cuz high dpi screen huh
   @media only screen and (width: 1440px) {
     .aboutCardWrapper {
-      margin-left: -5vw;
+      margin-left: -7vw;
     }
     .s3rightCont {
-      margin-left: -5vw;
+      margin-left: -7vw;
     }
 
     .bottomRect {
@@ -331,10 +332,10 @@ body {
   }
   @media only screen and (width: 1536px) {
     .aboutCardWrapper {
-      margin-left: -5vw;
+      margin-left: -7vw;
     }
     .s3rightCont {
-      margin-left: -5vw;
+      margin-left: -7vw;
     }
 
     .bottomRect {
@@ -855,7 +856,7 @@ $progBgActualWidth: 100 vw-0 .5vw;
         border-left: unset;
         padding-top: 0;
         margin-top: -30vh;
-        padding-left: 8vw;
+        margin-left: 2vw;
 
         background-color: initial;
         background-attachment: initial;
