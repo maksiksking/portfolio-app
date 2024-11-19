@@ -35,8 +35,8 @@ function S3about() {
 
 
         <Card/>
-        <Skills/>
         <RightPartInAbout/>
+        <Skills/>
         <BottomRect/>
 
 

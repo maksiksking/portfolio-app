@@ -28,7 +28,8 @@ function Card() {
     })
 
     return (
-        <animated.svg ref={ref} style={styles} className={"aboutCard"} width="885" height="537" viewBox="0 0 585 537"
+        <div className={"aboutCardWrapper"}>
+        <animated.svg ref={ref} style={styles} className={"aboutCard"} width="885" height="537" viewBox="0 0 885 537"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg">
             <rect x="869" width="16" height="537" rx="6" fill="#545454"/>
@@ -76,6 +77,7 @@ function Card() {
                 <rect x="342" y="276" width="2" height="132" rx="1" transform="rotate(-90 342 276)" fill="white"/>
             </>}
         </animated.svg>
+        </div>
     )
 
 }
