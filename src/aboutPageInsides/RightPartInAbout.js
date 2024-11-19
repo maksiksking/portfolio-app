@@ -31,7 +31,7 @@ function RightPart() {
 
 
     const styles = useSpring({
-        fontSize: getLanguage()==="uk"  ? "1.5rem" : "1.8rem",
+        fontSize: getLanguage()==="uk"  ? "1.5rem" : "1.5rem",
         // extra bit for translation ^
         scale: isInView ? 1 : 0,
         config: {
