@@ -1,9 +1,9 @@
-import React, {useRef} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import './css/styles.scss';
 
 import AllEmBoxes from "./webDevInsides/AllEmBoxes";
 
-import {animated, useInView, useSpring} from "@react-spring/web";
+import {animated, useInView, useScroll, useSpring} from "@react-spring/web";
 
 function S5webDev() {
     const buildInteractionObserverThreshold = (count = 100) => {
@@ -37,6 +37,10 @@ function S5webDev() {
         },
     })
 
+    // scroll anim
+
+    const { scrollYProgress } = useScroll();
+
 
     return (<section className={"s5webDev"}>
         <div className={"topperContainerWrapper"}>
@@ -51,26 +55,68 @@ function S5webDev() {
             </div>
         </div>
         <div className={"webBg"}>
-            <div style={{
+            <animated.div style={{
                 border: "3px solid",
                 borderImageSlice: "1",
                 borderWidth: "3px",
                 borderImageSource: "linear-gradient(to left, #743ad5, #d53a9d)",
-            }} className={"webBgSquare"}></div>
-            <div style={{
+
+                x: scrollYProgress.to((progress) => {
+                    const pageHeight = window.innerHeight;
+                    return progress * pageHeight/12;
+                }),
+                y: scrollYProgress.to((progress) => {
+                    const pageHeight = window.innerHeight;
+                    return progress * pageHeight/4;
+                }),
+                config: {
+                    mass: 15,
+                    friction: 70,
+                    tension: 320,
+                },
+            }} className={"webBgSquare"}></animated.div>
+            <animated.div style={{
                 border: "3px solid",
                 borderImageSlice: "1",
                 borderWidth: "3px",
                 borderImageSource: "linear-gradient(to left, #743ad5, #d53a9d)",
                 opacity: 0.8,
-            }} className={"webBgSquare"}></div>
-            <div style={{
+
+                x: scrollYProgress.to((progress) => {
+                    const pageHeight = window.innerHeight;
+                    return progress * pageHeight/9;
+                }),
+                y: scrollYProgress.to((progress) => {
+                    const pageHeight = window.innerHeight;
+                    return progress * pageHeight/-3;
+                }),
+                config: {
+                    mass: 15,
+                    friction: 70,
+                    tension: 320,
+                },
+            }} className={"webBgSquare"}></animated.div>
+            <animated.div style={{
                 border: "3px solid",
                 borderImageSlice: "1",
                 borderWidth: "3px",
                 borderImageSource: "linear-gradient(to left, #743ad5, #d53a9d)",
                 opacity: 0.4,
-            }} className={"webBgSquare"}></div>
+
+                x: scrollYProgress.to((progress) => {
+                    const pageHeight = window.innerHeight;
+                    return progress * pageHeight/6;
+                }),
+                y: scrollYProgress.to((progress) => {
+                    const pageHeight = window.innerHeight;
+                    return progress * pageHeight/-20;
+                }),
+                config: {
+                    mass: 15,
+                    friction: 70,
+                    tension: 320,
+                },
+            }} className={"webBgSquare"}></animated.div>
         </div>
 
         <AllEmBoxes/>
