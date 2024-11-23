@@ -21,15 +21,12 @@ function LightBox() {
     }))
 
     let theBox = document.getElementsByClassName("lightBox")[0]
-    console.log(theBox)
-
     if (check) {
-        console.log(theBox)
         theBox.classList.add("no-pointer")
     }
 
     function display() {
-        console.log("test")
+        console.log("Displayed") // yup
     }
 
     const unDisplay = () => {

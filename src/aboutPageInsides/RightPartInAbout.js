@@ -58,14 +58,10 @@ function RightPart() {
     const names = translatedAttributes.names || [];
     const values = translatedAttributes.values || [];
 
-    console.log(values[0]);
-
     const combinedAttributes = names.map((name, index) => ({
         name,
         value: values[index] || '',
     }));
-
-    console.log(combinedAttributes);
 
     return (
         <div className={"s3rightCont"}>

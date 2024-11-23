@@ -2,35 +2,10 @@ import React, {memo, useRef, useState} from 'react';
 import '../css/styles.scss';
 import {animated, useSpring} from '@react-spring/web';
 
+// flexixfy cfg
 
 function AllEmBoxes() {
-    const handleClick = () => {
-        const themAll = document.getElementsByClassName("corVid")
-        console.log(themAll);
-        for (let item of themAll) {
-
-            console.log(item);
-        }
-
-        api.start({
-            from: {},
-            to: {
-                width: "252.7%",
-            },
-        })
-    }
-    const unhandleClick = () => {
-        console.log("hi")
-        api.start({
-            from: {},
-            to: {
-                width: "100%",
-            },
-        })
-    }
-
     const videoRef = useRef(null);
-
 
     const futureVid = <video ref={videoRef} className={"corVid"} src={"../vid/webdvid1.webm"} loop muted autoPlay={true}>
     </video>

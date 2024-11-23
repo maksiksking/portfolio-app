@@ -5,8 +5,6 @@ import {animated, useScroll} from "@react-spring/web";
 
 function S1ini() {
     const { scrollYProgress } = useScroll();
-    console.log(scrollYProgress)
-
     return (
 
         <div className={"iniIllusion"}>

@@ -6,7 +6,7 @@ import Suidou from "./svgComps/s4/Suidou";
 
 
 
-function S4holder({ sendPass }) {
+function S4holder() {
     return (<section className={"s4holder"}>
         <LiteralCard/>
         <Suidou/>

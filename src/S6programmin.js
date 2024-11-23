@@ -30,9 +30,7 @@ function S6programmin() {
     }
 
 
-    return (<section onMouseMove={moveSnow} onMouseOut={() => {
-        console.log("in check")
-    }} className={"s6programmin"}>
+    return (<section onMouseMove={moveSnow} className={"s6programmin"}>
         <div  className={"innerProgCont"}>
             <div className={"coverUp"}></div>
             <h2 className={"devTxt progCaretCont"}>

@@ -92,7 +92,6 @@ function S1ini() {
     function changeLang() {
         if (switcher) {
             i18n.changeLanguage("en")
-            console.log("hello")
             setFlagUa("#bfccb8")
             setFlagGb("#ffffff")
             setSwitcher(false);
