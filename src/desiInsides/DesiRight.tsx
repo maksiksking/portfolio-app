@@ -1,6 +1,6 @@
 import '../css/styles.scss';
 
-import {useEffect, useRef, useState} from "react";
+import {memo, useEffect, useRef, useState} from "react";
 
 import {useRecoilState} from "recoil";
 import {lightBoxAtom} from "../recoil/atom/lightBoxAtom"
@@ -105,4 +105,4 @@ function DesiRight() {
     );
 }
 
-export default DesiRight;
+export default memo(DesiRight);
