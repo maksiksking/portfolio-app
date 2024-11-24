@@ -4,7 +4,7 @@ import RightPFPWidget from "./RightPFPWidget";
 
 import { useTranslation } from "react-i18next";
 
-import {useTrail, useInView, animated, useSpring} from "@react-spring/web";
+import {useInView, animated, useSpring} from "@react-spring/web";
 import i18next from "i18next";
 
 function RightPart() {
