@@ -1,14 +1,19 @@
 import React, {useRef} from "react";
 import '../../css/styles.scss';
 import {useInView, useSpring, animated} from "@react-spring/web";
-import {Trans} from "react-i18next";
+import {Trans, useTranslation} from "react-i18next";
 import i18next from "i18next";
 
 // Notice: The text is IN the SVG in a <text>! Because it's imported from Figma with
 // Outline Text disabled to keep it SEO, copyable and to save some time
 
 function Card() {
+    // eslint-disable-next-line no-unused-vars
+    const { t, i18n } = useTranslation();
+    // updater! ^
+
     const getLanguage = () => i18next.language || window.localStorage.i18nextLng
+
 
     const [ref, isInView] = useInView({
     })

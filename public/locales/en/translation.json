@@ -15,13 +15,14 @@
     "lang1": "English",
     "lang2": "Ukrainian",
     "lang3": "Japanese",
-    "learning": "^ (learning)",
+    "learning": "",
     "level1": "Fluent",
     "level2": "Native",
     "level3": "N3/N4~"
   },
 
-  "_comment": "the paragraphs don't need translations, 4 am Maksiks don't you dare forget",
+  "_comment0": "removed learning to sound better, remember it's there tho",
+  "_comment1": "the paragraphs don't need translations, 4 am Maksiks don't you dare forget",
 
   "skillsTitle": "Skills",
   "skillsDesc": {
