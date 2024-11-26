@@ -35,11 +35,11 @@ function DesiLeft() {
             <text fill="black" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="15"
                   letter-spacing="0em">
                 <tspan x="99.1025" y="387.352"><Trans i18nKey={"graphics.bench"}></Trans>&#10;</tspan>
-                <tspan x="198.346" y="404.353">( &#x361;&#xb0; &#x35c;&#x296; &#x361;&#xb0;)</tspan>
+                <tspan x="198.346" y="409.353">( &#x361;&#xb0; &#x35c;&#x296; &#x361;&#xb0;)</tspan>
             </text>
             <text fill="black" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="15"
                   letter-spacing="0em">
-                <tspan x="200" y="432" style={{zIndex: 0}}><Trans i18nKey={"graphics.both"}></Trans>&#10;</tspan>
+                <tspan x="192" y="432" style={{zIndex: 0}}><Trans i18nKey={"graphics.both"}></Trans>&#10;</tspan>
             </text>
             <rect className={"lilSpoiler"} onClick={() => {
                 setX(0) ; setPointer("initial")
