@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import './css/styles.scss';
 
 import LiteralCard from './svgComps/s4/LiteralCard';
