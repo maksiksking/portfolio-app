@@ -1,13 +1,9 @@
 import React from 'react';
 import {
     RecoilRoot,
-    atom,
-    selector,
-    useRecoilState,
-    useRecoilValue,
 } from 'recoil';
 
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import ReactDOM from 'react-dom/client';
 import './css/styles.scss';
 
@@ -37,15 +33,6 @@ function RestOfThePage() {
             <MiniFooter/>
         </>
     )
-}
-
-
-function getWindowDimensions() {
-    const { innerWidth: width, innerHeight: height } = window;
-    return {
-        width,
-        height
-    };
 }
 
 function Page() {
