@@ -10,7 +10,6 @@ import './css/styles.scss';
 import './i18n';
 
 import S1ini from './S1ini.js';
-import S2now from './S2now.js';
 import LightBox from "./LightBox";
 import S3about from "./S3about";
 import S4holder from "./S4holder";
@@ -42,7 +41,7 @@ function Page() {
 
     return (<RecoilRoot translate="no">
         <S1ini/>
-        {/*<S2now sendPass={sendPass}/>*/}
+        {/*<S2now/> removed*/}
         <RestOfThePage/>
         </RecoilRoot>
     )
