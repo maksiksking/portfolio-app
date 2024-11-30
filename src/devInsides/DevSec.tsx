@@ -6,7 +6,8 @@ import Snow from "../devInsides/Snow"
 
 import {useTranslation} from "react-i18next";
 
-// react doesnt wanna eat my path and make a video so I have to import them separately, so weird
+// react (or ts?) doesn't wanna eat my path and make a video so I have to import them separately, so weird
+// anyways a better way to solve this as I later discovered would be to put the vids inside the public folder
 const mouseSpinVid: any = <video src={"vid/cursorRealForreal.mp4"} loop={true} muted={true} autoPlay={true} />
 const textLapserVid: any = <img className={"devVideoEven"} src={"vid/impostor.png"} alt={"impostor"}/>
 const opApVid: any = <img src={"vid/imposter2.png"} alt={"impostor2"}/>
