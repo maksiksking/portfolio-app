@@ -8,8 +8,6 @@ import i18next from "i18next";
 // Notice: The text is IN the SVG in a <text>! Because it's imported from Figma with
 // Outline Text disabled to keep it SEO, copyable and to save some time
 
-// Springs animation doesn't work at all??!
-
 function LiteralCard() {
     const getLanguage = () => i18next.language || window.localStorage.i18nextLng
 
