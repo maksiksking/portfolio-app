@@ -2,9 +2,9 @@
   "aboutMeTitle": "About Me",
   "aboutMeDesc": {
     "line1": "I’m hardly a your average person.",
-    "line2": "I do a lot of stuff. I can’t stop even if it hurts.",
-    "line3": "You could take that as a good thing but, I guess",
-    "line4": "that just shows that I’m not happy, doesn’t it?"
+    "line2": "I do a lot of stuff.",
+    "line3": "",
+    "line4": "Enjoy the website! :)"
   },
   "attributes": {
     "names": ["Age:", "Pronouns:", "Occupation:", "Nationality:", "Favorite metal:", "Fav. artist:"],

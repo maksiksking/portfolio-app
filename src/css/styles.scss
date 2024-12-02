@@ -225,6 +225,10 @@ body {
   width: 100vw;
   height: 120vh;
 
+  .purpleAboutBit {
+    display: none;
+  }
+
   div {
     z-index: 19999;
     .aboutCard {
