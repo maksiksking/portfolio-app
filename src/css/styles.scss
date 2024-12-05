@@ -846,7 +846,8 @@ $progBgActualWidth: 100 vw-0 .5vw;
         margin-left: 0;
       }
       @media only screen and (width: 1536px) {
-        margin-left: 0;
+        scale: 0.89;
+        margin-left: -4vw;
       }
 
       @include media(">phone", "<=tablet") {
