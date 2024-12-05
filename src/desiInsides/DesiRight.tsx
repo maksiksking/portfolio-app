@@ -33,14 +33,16 @@ function DesiRight() {
         {id: "Flags of Europe with years of their official adoption", img: "/img/europeflagchartv3.png", ratio: "w"},
         {id: "Boban's bakery for a commission", img: "/img/finalBakery.png", ratio: "w"},
         {id: "Fiverr banner", img: "/img/FiverrBanner.png", ratio: "w"},
+
+        // {id: "Digital/physical heart", img: "/img/heart.png", ratio: "v"},
+        // {id: "A moon", img: "/img/lilmoontransparent.png", ratio: "s"},
+        {id: "Fiverr banner", img: "/img/Showfor.png", ratio: "w"},
         {id: "3D Boolean Gun", img: "/img/GunFinal.png", ratio: "w"},
-        {id: "Digital/physical heart", img: "/img/heart.png", ratio: "v"},
-        {id: "One of the many", img: "/img/MaksiksLogo6.png", ratio: "s"},
         {id: "Yet another logo", img: "/img/musicMaksiks.png", ratio: "s"},
         {id: "Another logo, that's right", img: "/img/Never fade awayv16.png", ratio: "s"},
         {id: "The current", img: "/img/pfpvlike40somethingidkilostcount.png", ratio: "s"},
         {id: "Made using only a random desktop screenshot", img: "/img/scribe.png", ratio: "w"},
-        {id: "Some very old vector art", img: "/img/Shine.jpg", ratio: "w"},
+        {id: "A little college fare throwback", img: "/img/Models.png", ratio: "w"},
         {id: "A little tea pin", img: "/img/TeaPin.png", ratio: "s"},
         {id: "Textbooks really are mid", img: "/img/textbooks are mid.png", ratio: "w"},
         {id: "TextLapser", img: "/img/TextLapser.png", ratio: "s"},
@@ -48,7 +50,7 @@ function DesiRight() {
         {id: "Patriotic", img: "/img/Ukraine.png", ratio: "s"},
         {id: "Diamonds are kinda meh", img: "/img/wothlessVFaceless.png", ratio: "w"},
         {id: "The doodle stash", img: "/img/ytchannelthumbvgl6.png", ratio: "w"},
-        {id: "A moon", img: "/img/lilmoontransparent.png", ratio: "s"}
+        {id: "One of the many", img: "/img/MaksiksLogo6.png", ratio: "s"},
     ]
 
     function activateLightBoxMode(img: string, txt: string)
@@ -66,7 +68,7 @@ function DesiRight() {
         let type: string = "something broke";
         iter += 1;
         if (props.ratio === "w") {
-            if (iter === 19 || iter === 30) {
+            if (iter === 19 || iter === 29) {
                 type = "four-horizontal-grid-cells";
             }
             else {
