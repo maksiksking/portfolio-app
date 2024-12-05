@@ -44,16 +44,6 @@ function RightPart() {
     }
 
 
-    const attributes = [
-        {id: "age1", name: "age:", value: "17"},
-        {id: "pronouns1", name: "pronouns:", value: "he/him"},
-        {id: "occupation1", name: "occupation:", value: "student"},
-        {id: "nationality1", name: "nationality:", value: "ukrainian"},
-        {id: "favorite1", name: "favorite\n" +
-                "metal:", value: "lead "},
-        {id: "alone1", name: "alone:", value: "alone"},
-    ]
-
     const translatedAttributes = t('attributes', { returnObjects: true });
     const names = translatedAttributes.names || [];
     const values = translatedAttributes.values || [];
