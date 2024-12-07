@@ -32,17 +32,19 @@ function MainPage() {
             <Helmet>
                 <title>Maksiks</title>
                 <meta name='description' content='My about me page, made in React, try it out and see.'/>
-                { /* Facebook tags */ }
-                <meta property="og:type" content={"portfolio"} />
-                <meta property="og:title" content={"Maksiks"} />
-                <meta property="og:description" content={"My about me page, made in React, try it out and see."} />
-                { /* End Facebook tags */ }
-                { /* Twitter tags */ }
-                <meta name="twitter:creator" content={"Maksiks"} />
-                <meta name="twitter:card" content={"app"} />
-                <meta name="twitter:title" content={"Maksiks"} />
-                <meta name="twitter:description" content={"My about me page, made in React, try it out and see."} />
-                { /* End Twitter tags */ }
+                { /* Facebook tags */}
+                <meta property="og:type" content={"portfolio"}/>
+                <meta property="og:title" content={"Maksiks"}/>
+                <meta property="og:description" content={"My about me page, made in React, try it out and see."}/>
+                { /* Very reliable yes yes */}
+                <meta property="og:image" content="https://static-00.iconduck.com/assets.00/snowflake-emoji-1789x2048-8zi0l7bq.png"/>
+                { /* End Facebook tags */}
+                { /* Twitter tags */}
+                <meta name="twitter:creator" content={"Maksiks"}/>
+                <meta name="twitter:card" content={"app"}/>
+                <meta name="twitter:title" content={"Maksiks"}/>
+                <meta name="twitter:description" content={"My about me page, made in React, try it out and see."}/>
+                { /* End Twitter tags */}
             </Helmet>
             <RecoilRoot translate="no">
                 <S1ini/>
