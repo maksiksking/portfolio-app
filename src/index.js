@@ -35,7 +35,8 @@ function Page() {
                 setTitleIx(initSubName.length - 1);
                 setCurrentTimeout(3000);
                 // exit
-                ifPass = false;
+                return () => clearInterval(interval)
+
 
             }
             if (ifPass) {
