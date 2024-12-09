@@ -34,7 +34,6 @@ function Page() {
                 setTitleIxOld(titleIx);
                 setTitleIx(initSubName.length - 1);
                 setCurrentTimeout(3000);
-
                 // exit
                 ifPass = false;
 
@@ -62,7 +61,7 @@ function Page() {
         }, currentTimeout)
 
         return () => clearInterval(interval)
-    }, [currentTimeout, initSubName.length, subName, switcher, titleIx, titleIxOld]);
+    }, [currentTimeout, initSubName.length, subName, titleIx, titleIxOld]);
 
     useEffect(() => {
         if (switcher === true) {
