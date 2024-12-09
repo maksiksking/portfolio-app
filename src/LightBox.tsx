@@ -26,7 +26,7 @@ function LightBox() {
     }
 
     function display() {
-        console.log("Displayed") // yup
+        // console.log("Displayed") // yup
     }
 
     const unDisplay = () => {
