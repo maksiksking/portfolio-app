@@ -70,7 +70,7 @@ function Page() {
     useEffect(() => {
         if (switcher === true) {
             console.log("ita: " + titleIx);
-            document.title = curTitle+"∣";
+            document.title = curTitle+"▮";
         } else {
             console.log("ita: " + titleIx);
             document.title = curTitle+" ";
