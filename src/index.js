@@ -30,21 +30,12 @@ function Page() {
         }
         let ifPass = true;
         const interval = setInterval(() => {
-            if (titleIx === initSubName.length) {
-                console.log("hi");
-                console.log("huh");
-                console.log(titleIx);
-                console.log("huh");
-            }
             if (titleIx === initSubName.length && (titleIxOld === titleIx - 1)) {
                 setTitleIxOld(titleIx);
                 setTitleIx(initSubName.length - 1);
                 setCurrentTimeout(3000);
-                console.log("huh");
-                console.log(initSubName.length - 1);
-                console.log(titleIx);
-                console.log("huh");
-                // return () => clearInterval(interval)
+
+                // exit
                 ifPass = false;
 
             }
@@ -63,9 +54,7 @@ function Page() {
                 if (titleIx === 0 && (titleIxOld === titleIx + 1)) {
                     setTitleIxOld(initSubName.length-1);
                     setTitleIx(initSubName.length);
-                    console.log("HELLo")
                 }
-                console.log(titleIx)
             }
 
             setCurTitle(subName.slice(0, -titleIx));
@@ -73,10 +62,9 @@ function Page() {
         }, currentTimeout)
 
         return () => clearInterval(interval)
-    }, [currentTimeout, initSubName.length, subName, titleIx, titleIxOld]);
+    }, [currentTimeout, initSubName.length, subName, switcher, titleIx, titleIxOld]);
 
     useEffect(() => {
-        console.log(curTitle)
         if (switcher === true) {
             document.title = curTitle+"∣";
         } else {
