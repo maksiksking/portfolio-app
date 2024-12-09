@@ -24,19 +24,23 @@ function Page() {
     const [switcher, setSwitcher] = useState(false)
 
     useEffect(() => {
-        setSwitcher(!switcher)
         if (currentTimeout === 3000) {
             setCurrentTimeout(1000);
         }
         let ifPass = true;
         const interval = setInterval(() => {
+            setSwitcher(!switcher)
+            console.log("new ita");
+            console.log(titleIxOld);
+            console.log(titleIx);
+            console.log("new ita");
             if (titleIx === initSubName.length && (titleIxOld === titleIx - 1)) {
                 setTitleIxOld(titleIx);
                 setTitleIx(initSubName.length - 1);
                 setCurrentTimeout(3000);
                 // exit
                 return () => clearInterval(interval)
-
+                console.log("new ita");
 
             }
             if (ifPass) {
@@ -52,25 +56,26 @@ function Page() {
                     setTitleIx(titleIx + 1);
                 }
                 if (titleIx === 0 && (titleIxOld === titleIx + 1)) {
-                    setTitleIxOld(initSubName.length-1);
-                    setTitleIx(initSubName.length);
+                    setTitleIxOld(initSubName.length-2);
+                    setTitleIx(initSubName.length-1);
                 }
             }
 
             setCurTitle(subName.slice(0, -titleIx));
-
         }, currentTimeout)
 
         return () => clearInterval(interval)
-    }, [currentTimeout, initSubName.length, subName, titleIx, titleIxOld]);
+    }, [currentTimeout, initSubName.length, subName, switcher, titleIx, titleIxOld]);
 
     useEffect(() => {
         if (switcher === true) {
+            console.log("ita: " + titleIx);
             document.title = curTitle+"∣";
         } else {
+            console.log("ita: " + titleIx);
             document.title = curTitle+" ";
         }
-    }, [curTitle]);
+    }, [curTitle, switcher, titleIx]);
 
     return (
         <HelmetProvider context={helmetContext}>
