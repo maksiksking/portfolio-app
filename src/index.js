@@ -1,7 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import {
-    RecoilRoot,
-} from 'recoil';
 
 import ReactDOM from 'react-dom/client';
 import './css/styles.scss';
@@ -40,7 +37,6 @@ function Page() {
                 setCurrentTimeout(3000);
                 // exit
                 return () => clearInterval(interval)
-                console.log("new ita");
 
             }
             if (ifPass) {
@@ -69,10 +65,8 @@ function Page() {
 
     useEffect(() => {
         if (switcher === true) {
-            console.log("ita: " + titleIx);
             document.title = curTitle+"▮";
         } else {
-            console.log("ita: " + titleIx);
             document.title = curTitle+" ";
         }
     }, [curTitle, switcher, titleIx]);
