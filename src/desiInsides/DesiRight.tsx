@@ -1,6 +1,6 @@
 import '../css/styles.scss';
 
-import {memo, useEffect, useRef, useState} from "react";
+import {memo} from "react";
 
 import {useRecoilState} from "recoil";
 import {lightBoxAtom} from "../recoil/atom/lightBoxAtom"

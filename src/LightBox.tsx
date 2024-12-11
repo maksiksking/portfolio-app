@@ -4,12 +4,12 @@ import {animated, useSpring} from '@react-spring/web';
 
 import {useRecoilState, useRecoilValue} from 'recoil';
 import {lightBoxAtom} from "./recoil/atom/lightBoxAtom"
-import {useState, useCallback} from "react";
 
 function LightBox() {
     const recoilData: object = useRecoilValue(lightBoxAtom);
     const check: boolean = (recoilData[0]?.check === "true");
     const img: string = recoilData[1]?.img;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [_, setCheck] = useRecoilState(lightBoxAtom);
 
 
