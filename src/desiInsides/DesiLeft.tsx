@@ -5,6 +5,7 @@ import React, {useState} from "react";
 import {Trans} from "react-i18next";
 
 function DesiLeft() {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const t = useTranslation();
     // updater
 
