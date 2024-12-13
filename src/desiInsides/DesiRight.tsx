@@ -55,7 +55,6 @@ function DesiRight() {
 
     function activateLightBoxMode(img: string, txt: string)
     {
-        let theBox = document.getElementsByClassName("lightBox")[0]
         document.body.style.overflowY = 'hidden';
 
         setCheck([{check: "true"}, {img: img}, {text: txt}]);
