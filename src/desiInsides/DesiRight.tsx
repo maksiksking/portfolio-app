@@ -12,6 +12,7 @@ interface DiscombobulateDataProps {
 }
 
 function DesiRight() {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [_, setCheck] = useRecoilState(lightBoxAtom);
 
     const data = [
