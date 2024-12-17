@@ -53,7 +53,7 @@ function LightBox() {
     }
 
 
-    // lazy af
+    // lazy ah
     if (!img) {
         setTimeout(display, 500)
     }
