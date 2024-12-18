@@ -15,8 +15,8 @@ function Page() {
     const [titleIx, setTitleIx] = useState(0)
     const [titleIxOld, setTitleIxOld] = useState(0)
     const [curTitle, setCurTitle] = useState('')
-    const [initSubName, setInitSubName] = useState('Maksiksq')
-    const [subName, setSubName] = useState('Maksiks ')
+    const [initSubName] = useState('Maksiksq')
+    const [subName] = useState('Maksiks ')
     const [currentTimeout, setCurrentTimeout] = useState(1000)
     const [switcher, setSwitcher] = useState(false)
 
