@@ -7,7 +7,7 @@
 - maybe fix it being lax on phone | well
 ### S5 Web dev
 - maybe make AllEmBoxes into a flex container and make it animate properly so you know, you can see the actual videos duh | remake it entirely
-- maybe add text to AllEmBoxes | remake it whole
+- remake AllEmBoxes completely
 ### S6 Dev
 - maybe add proper pixel art to all DevSec's
 - maybe fix snow going out of bounds on phone | ngf
