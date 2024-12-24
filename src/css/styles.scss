@@ -314,7 +314,7 @@ body {
 
     .underProfile {
       padding-top: 1vw;
-      padding-left: 2.2vw;
+      padding-left: 0.8vw;
     }
 
     img {
@@ -322,6 +322,14 @@ body {
       width: 20.8vw;
       object-fit: contain;
     }
+    @media only screen and (width: 1536px) {
+      img {
+        margin-left: 1.2vw;
+        width: 20.8vw;
+        object-fit: contain;
+      }
+    }
+
   }
 
   // cringe laptop resolution specific cuz just in case
