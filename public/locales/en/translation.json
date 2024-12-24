@@ -7,8 +7,8 @@
     "line4": "Enjoy the website! :)"
   },
   "attributes": {
-    "names": ["Pronouns:", "Occupation:", "Nationality:", "Favorite metal:", "Fav. artist:"],
-    "values": ["he/him", "student", "Ukrainian", "lead", "Mekaloton"]
+    "names": ["Pronouns:", "Occupation:", "Nationality:", "Fav. metal:", "Fav. artist:", "Fav. food:"],
+    "values": ["he/him", "student", "Ukrainian", "lead", "Mekaloton", "sushi"]
   },
   "languagesTitle": "Languages",
   "languagesDesc": {
