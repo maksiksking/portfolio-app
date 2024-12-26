@@ -111,14 +111,14 @@ function Skills() {
                 <text fill="white" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="40"
                       letter-spacing="0em"><tspan x="81" y="256.44"><Trans i18nKey={"skillsDesc.webDevTitle"}></Trans></tspan></text>
                 <text fill="white" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="28"
-                      letter-spacing="0em"><tspan x="81" y="302.558">&#62; HTML, CSS, JS, React,&#10;</tspan>
-                        <tspan x="81" y="333.558">Node, Figma, Photoshop,&#10;</tspan>
-                        <tspan x="81" y="364.558">Git, UI/UX design, SCSS,&#10;</tspan>
-                        <tspan x="81" y="395.558">LESS, Responsive design,&#10;</tspan>
+                      letter-spacing="0em"><tspan x="81" y="302.558">&#62; Vue, React, JS, TS,&#10;</tspan>
+                        <tspan x="81" y="333.558">SCSS, LESS, Figma,&#10;</tspan>
+                        <tspan x="81" y="364.558">Photoshop, Git,&#10;</tspan>
+                        <tspan x="81" y="395.558">UI/UX design, Tauri,&#10;</tspan>
                         <tspan x="81" y="426.558">Electron, SEO</tspan></text>
                 <text fill="white" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="28"
-                      letter-spacing="0em"><tspan x="574" y="145.558">&#62; Python, JS, C++, Java,&#10;</tspan>
-                        <tspan x="574" y="176.558">Assembler</tspan></text>
+                      letter-spacing="0em"><tspan x="574" y="145.558">&#62; Python, JS, TS, C++, &#10;</tspan>
+                        <tspan x="574" y="176.558">Java, Assembler</tspan></text>
                 <text fill="white" style={{whiteSpace: "pre"}} font-family="Comfortaa" font-size="24"
                       letter-spacing="0em"><tspan x="571" y="209.264">&#62; Discord.py, Minecraft&#10;</tspan>
                         <tspan x="571" y="236.264">Fabric, Electron</tspan></text>
