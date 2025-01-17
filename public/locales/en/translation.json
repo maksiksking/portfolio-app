@@ -46,7 +46,7 @@
 
     "devSec3": {
       "title": "OpenAI API implementation",
-      "desc": "A part of the back-end for this website was actually made in Python, with Pyodide to make the utilization of the ChatGPT API a little easier. Also gave me some nice experience with the API.\n"
+      "desc": "A part of the back-end for AI-emojify was actually made in Python, with Pyodide to make the utilization of the ChatGPT API a little easier. Also gave me some nice experience with the API.\n"
     },
 
     "devSec4": {
