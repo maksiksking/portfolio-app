@@ -25,11 +25,11 @@
 
   "skillsTitle": "Скіли",
   "skillsDesc": {
-    "webDevTitle": "Web-dev",
+    "webDevTitle": "Web-розробка",
     "digitalArtTitle": "Digital art",
     "devTitle": "Розробка",
     "graphicDesignTitle": "Граф. дизайн",
-    "videoEditingTitle": "Монтаж ",
+    "videoEditingTitle": "Монтаж відео",
     "andMoreTitle": "І більше..."
   },
 
