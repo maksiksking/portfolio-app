@@ -1,6 +1,6 @@
 import React from "react";
 import '../css/styles.scss';
-import RightPFPWidget from "./RightPFPWidget";
+import RightPFPWidget from "./RightPFPWidget.jsx";
 
 import { useTranslation } from "react-i18next";
 

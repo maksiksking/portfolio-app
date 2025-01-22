@@ -2,7 +2,7 @@ import '../css/styles.scss';
 
 import DevSvgLine from "../svgComps/DevSvgLine";
 import React from "react";
-import Snow from "../devInsides/Snow"
+import Snow from "./Snow"
 
 import {useTranslation} from "react-i18next";
 
@@ -35,7 +35,7 @@ function DistributeData(props: distributeDataProps) {
                 <Snow sp={props.sp}/>
                 <div className="devSec">
                     <div className={"funkyDiv"}>
-                        <img className={"dec1Rainloop"} src={require("../img/rainlooptt.gif")} loading={"lazy"}
+                        <img className={"dec1Rainloop"} src={"./img/rainlooptt.gif"} loading={"lazy"}
                              alt="rainl"/>
                     </div>
                     <div className={"devSecBox"}>

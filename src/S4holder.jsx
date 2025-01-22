@@ -1,8 +1,8 @@
 import React from "react";
 import './css/styles.scss';
 
-import LiteralCard from './svgComps/s4/LiteralCard';
-import Suidou from "./svgComps/s4/Suidou";
+import LiteralCard from './svgComps/s4/LiteralCard.jsx';
+import Suidou from "./svgComps/s4/Suidou.jsx";
 
 
 

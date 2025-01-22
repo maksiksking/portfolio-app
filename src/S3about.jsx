@@ -1,10 +1,10 @@
 import React from "react";
 import './css/styles.scss';
 
-import Card from './svgComps/s3/Card.js'
-import Skills from './svgComps/s3/Skills'
-import BottomRect from "./aboutPageInsides/BottomRect";
-import RightPartInAbout from "./aboutPageInsides/RightPartInAbout";
+import Card from './svgComps/s3/Card.jsx'
+import Skills from './svgComps/s3/Skills.jsx'
+import BottomRect from "./aboutPageInsides/BottomRect.jsx";
+import RightPartInAbout from "./aboutPageInsides/RightPartInAbout.jsx";
 
 function S3about() {
     return (<section className={"s3about"}>

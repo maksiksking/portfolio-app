@@ -1,13 +1,13 @@
 import {useState, React, useEffect} from "react";
 
-import useCheckIfMobile from "./useCheckIfMobile";
+import useCheckIfMobile from "./useCheckIfMobile.js";
 import './css/styles.scss';
 
 import {animated, useSpring} from "@react-spring/web";
 
-import Illu from "./iniInsides/Illu";
+import Illu from "./iniInsides/Illu.jsx";
 
-import i18n from './i18n';
+import i18n from './i18n.js';
 import {useTranslation} from "react-i18next";
 import i18next from "i18next";
 

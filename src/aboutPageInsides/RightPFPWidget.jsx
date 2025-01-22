@@ -3,7 +3,7 @@ import '../css/styles.scss';
 
 import {useInView, animated, useSpring} from "@react-spring/web";
 
-import UnderProfile from "../svgComps/s3/UnderProfile";
+import UnderProfile from "../svgComps/s3/UnderProfile.jsx";
 
 
 
@@ -28,10 +28,8 @@ function RightPFPWidget() {
 
 
 
-
-
     return (<div className={"rightPfpWrapper"}>
-            <animated.img ref={ref} style={styles} className={"profilePic"} src={require("../img/pfpvlike40somethingidkilostcountplusoutline.png")}
+            <animated.img ref={ref} style={styles} className={"profilePic"} src={"../img/pfpvlike40somethingidkilostcountplusoutline.png"}
                  alt={"profilePic"}/>
             <UnderProfile />
         </div>

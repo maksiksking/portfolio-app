@@ -1,6 +1,6 @@
 import {Outlet, Link} from "react-router-dom";
 import React from "react";
-import Parmesan from "./Parmesan";
+import Parmesan from "./Parmesan.jsx";
 
 const Layout = () => {
     return (
@@ -8,7 +8,7 @@ const Layout = () => {
             <nav>
                 <ul>
                     <li>
-                        <Link to="/">Web</Link>
+                        <Link to="/public">Web</Link>
                     </li>
                     <li>
                         <Link to="/MeTheBestest">MeTheBestest</Link>
