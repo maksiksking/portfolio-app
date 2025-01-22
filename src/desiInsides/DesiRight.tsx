@@ -57,8 +57,7 @@ function DesiRight() {
         {id: "One of the many", img: "/img/MaksiksLogo6.png", ratio: "s"},
     ]
 
-    function activateLightBoxMode(img: string, txt: string)
-    {
+    function activateLightBoxMode(img: string, txt: string) {
         document.body.style.overflowY = 'hidden';
 
         setCheck([{check: "true"}, {img: img}, {text: txt}]);
@@ -72,12 +71,7 @@ function DesiRight() {
         let type: string = "something broke";
         iter += 1;
         if (props.ratio === "w") {
-            if (iter === 19 || iter === 29) {
-                // type = "four-horizontal-grid-cells";
-            }
-            else {
-                type = "wide-image";
-            }
+            type = "wide-image";
         }
         if (props.ratio === "s1k") {
             type = "two-vertical-grid-cells";
@@ -92,17 +86,14 @@ function DesiRight() {
             type = "four-grid-cells";
         }
         if (props.ratio === "s") {
-            if (iter === 1 || iter === 8 || iter === 23 || iter === 10) {
-                // type = "four-grid-cells";
-            }
-            else {
-                type = "one-grid-cell";
-            }
+            type = "one-grid-cell";
         }
         console.log(type)
         console.log(props.id)
         return (
-            <img onClick={() => {activateLightBoxMode(props.img, props.id);}} className={type} src={props.img} alt={props.id + " " + iter}/>
+            <img onClick={() => {
+                activateLightBoxMode(props.img, props.id);
+            }} className={type} src={props.img} alt={props.id + " " + iter}/>
         );
 
     }
