@@ -19,18 +19,21 @@ function DesiRight() {
         {id: "Oh god Afterplace is such an underrated game, it is so good", img: "/img/afterworld.png", ratio: "s4b"},
         {id: "Lit 🔥 sunset", img: "/img/amazingsunsetv1.png", ratio: "w"},
         {id: "Kasane Teto with a baguetto", img: "/img/kasanetetov4.png", ratio: "s1k"},
+        {id: "Jill from Va11hall-a", img: "/img/Jill-5ups.png", ratio: "s1k"},
         {id: "Knife", img: "/img/Artboard 2.png", ratio: "w"},
         {id: "Logo design", img: "/img/auraGoldMain.png", ratio: "w"},
         {id: "Lit 🔥 with napalm sunset", img: "/img/colorbgbutfilteredalot.png", ratio: "s3s"},
         {id: "Way too bright banner", img: "/img/Banner.png", ratio: "w"},
         {id: "Fiverr banner design", img: "/img/bannerBanner.png", ratio: "w"},
         {id: "Sacred scripture", img: "/img/bloodyBook.png", ratio: "s"}, // not actually s but sizes
-        {id: "Not just any other bush", img: "/img/bush.png", ratio: "s4b"},
         {id: "It's raining butter", img: "/img/butter.png", ratio: "s"},
-        {id: "A candle very much", img: "/img/Cave.png", ratio: "s"},
         {id: "One of the older desktop reworks", img: "/img/DekstopRework.png", ratio: "w"},
-        {id: "Spy", img: "/img/reflectionFinal1.png", ratio: "s2r"},
+        {id: "Not just any other bush", img: "/img/bush.png", ratio: "s4b"},
+        {id: "A candle very much", img: "/img/Cave.png", ratio: "s"},
         {id: "Playlist cover", img: "/img/EDMbg.png", ratio: "s"},
+        {id: "A really cool pixel sorted photo", img: "/img/pixelSortPhoto.png", ratio: "w"},
+        {id: "Another image here except pixel sorted", img: "/img/pixelSortDesktop.png", ratio: "w"},
+        {id: "Spy", img: "/img/reflectionFinal1.png", ratio: "s2r"},
         {id: "Flags of Europe with years of their official adoption", img: "/img/europeflagchartv3.png", ratio: "w"},
         {id: "Boban's bakery for a commission", img: "/img/finalBakery.png", ratio: "w"},
         {id: "Fiverr banner", img: "/img/FiverrBanner.png", ratio: "w"},
@@ -77,7 +80,7 @@ function DesiRight() {
             }
         }
         if (props.ratio === "s1k") {
-            type = "eight-grid-cells";
+            type = "two-vertical-grid-cells";
         }
         if (props.ratio === "s2r") {
             type = "six-grid-cells";
