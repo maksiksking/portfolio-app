@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Fredericka+the+Great&family=Karla:ital,wght@0,200..800;1,200..800&family=Lunasima:wght@400;700&family=Tiny5&display=swap');
-@import "include-media.scss";
+@import "include-media";
 
 $scrollBarWidth: 0.65vw;
 
@@ -908,6 +908,11 @@ $progBgActualWidth: 100 vw-0 .5vw;
 
       img.pne-grid-cell {
         grid-row: span 1 / auto;
+        grid-column: span 1 / auto;
+      }
+
+      img.two-vertical-grid-cells {
+        grid-row: span 2 / auto;
         grid-column: span 1 / auto;
       }
 

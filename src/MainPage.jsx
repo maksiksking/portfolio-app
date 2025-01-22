@@ -1,14 +1,14 @@
 import {Helmet} from "react-helmet-async";
 import {RecoilRoot} from "recoil";
-import S1ini from "./S1ini";
+import S1ini from "./S1ini.jsx";
 import React from "react";
-import LightBox from "./LightBox";
-import S3about from "./S3about";
-import S4holder from "./S4holder";
-import S5webDev from "./S5webDev";
-import S6programmin from "./S6programmin";
-import S7designin from "./S7designin";
-import MiniFooter from "./MiniFooter";
+import LightBox from "./LightBox.tsx";
+import S3about from "./S3about.jsx";
+import S4holder from "./S4holder.jsx";
+import S5webDev from "./S5webDev.jsx";
+import S6programmin from "./S6programmin.jsx";
+import S7designin from "./S7designin.jsx";
+import MiniFooter from "./MiniFooter.jsx";
 
 
 function RestOfThePage() {

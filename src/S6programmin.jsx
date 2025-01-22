@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import './css/styles.scss';
 import './css/snow.scss';
 
-import ProgramminBg from "./svgComps/s6/ProgramminBg";
+import ProgramminBg from "./svgComps/s6/ProgramminBg.jsx";
 import DevSec from "./devInsides/DevSec.tsx";
 import {useSpring} from '@react-spring/web';
 import {Trans} from "react-i18next";

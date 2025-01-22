@@ -1,8 +1,8 @@
 import React from "react";
 import './css/styles.scss';
 
-import DesiLeft from "./desiInsides/DesiLeft";
-import DesiRight from "./desiInsides/DesiRight";
+import DesiLeft from "./desiInsides/DesiLeft.tsx";
+import DesiRight from "./desiInsides/DesiRight.tsx";
 
 function S7designin() {
     return (<section className={"S7designin"}>

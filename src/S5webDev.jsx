@@ -1,7 +1,7 @@
 import React, {useRef} from "react";
 import './css/styles.scss';
 
-import AllEmBoxes from "./webDevInsides/AllEmBoxes";
+import AllEmBoxes from "./webDevInsides/AllEmBoxes.jsx";
 
 import {animated, useInView, useScroll, useSpring} from "@react-spring/web";
 

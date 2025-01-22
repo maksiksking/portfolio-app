@@ -1,17 +1,16 @@
 import React, {useEffect, useState} from 'react';
 
-import ReactDOM from 'react-dom/client';
 import './css/styles.scss';
 
-import './i18n';
+import './i18n.js';
 
 import {HelmetProvider} from 'react-helmet-async';
 
-import MainPage from "./MainPage";
+import MainPage from "./MainPage.jsx";
 
 const helmetContext = {};
 
-function Page() {
+function App() {
     const [titleIx, setTitleIx] = useState(0)
     const [titleIxOld, setTitleIxOld] = useState(0)
     const [curTitle, setCurTitle] = useState('')
@@ -75,7 +74,4 @@ function Page() {
     )
 }
 
-const container = document.getElementById('root');
-const root = ReactDOM.createRoot(container);
-root.render(<Page/>);
-
+export default App;

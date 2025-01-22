@@ -6,7 +6,7 @@ import '../../css/styles.scss';
 
 function ProgramminBg() {
     return (
-        <img className={"progBgImg"} src={require("./localImg/ProgBgv18.webp")}  alt={"Prog bg"}/>
+        <img className={"progBgImg"} src={"../img/ProgBgv18.png"} alt={"Prog bg"}/>
 
         // <svg className={"progBgImg"} width="100vw" height="4427" viewBox="0 0 100vw 4427" fill="none" xmlns="http://www.w3.org/2000/svg">
         //     <path
