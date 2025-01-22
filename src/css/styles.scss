@@ -911,6 +911,11 @@ $progBgActualWidth: 100 vw-0 .5vw;
         grid-column: span 1 / auto;
       }
 
+      img.two-vertical-grid-cells {
+        grid-row: span 2 / auto;
+        grid-column: span 1 / auto;
+      }
+
       img.four-grid-cells {
         grid-row: span 2 / auto;
         grid-column: span 2 / auto;

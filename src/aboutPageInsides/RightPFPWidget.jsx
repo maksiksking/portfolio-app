@@ -29,7 +29,7 @@ function RightPFPWidget() {
 
 
     return (<div className={"rightPfpWrapper"}>
-            <animated.img ref={ref} style={styles} className={"profilePic"} src={"../img/pfpvlike40somethingidkilostcountplusoutline.png"}
+            <animated.img ref={ref} style={styles} className={"profilePic"} src={"./img/pfpvlike40somethingidkilostcountplusoutline.png"}
                  alt={"profilePic"}/>
             <UnderProfile />
         </div>
