@@ -16,3 +16,5 @@
 ### General
 - phone performance fixes, preloads | -ish
 - maybe .webp all images although this is not necessary afaik | ngf
+
+.
