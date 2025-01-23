@@ -19,6 +19,9 @@ function App() {
     const [currentTimeout, setCurrentTimeout] = useState(1000)
     const [switcher, setSwitcher] = useState(false)
 
+    console.log("I'm eventually gonna remake the whole thing in probably Svelte or Vue and make it SSR and everything but this codebase is too large (and has too many dependencies) to move it to SSR right now, so you might have to stare at the images loading slowly in the last section.")
+
+
     useEffect(() => {
         if (currentTimeout === 3000) {
             setCurrentTimeout(1000);
@@ -26,7 +29,6 @@ function App() {
         let ifPass = true;
         const interval = setInterval(() => {
             setSwitcher(!switcher)
-            console.log("I'm eventually gonna remake the whole thing in probably Svelte or Vue and make it SSR and everything but this codebase is too large (and has too many dependencies) to move it to SSR right now, so you might have to stare at the images loading slowly in the last section.")
             if (titleIx === initSubName.length && (titleIxOld === titleIx - 1)) {
                 setTitleIxOld(titleIx);
                 setTitleIx(initSubName.length - 1);

@@ -88,8 +88,6 @@ function DesiRight() {
         if (props.ratio === "s") {
             type = "one-grid-cell";
         }
-        console.log(type)
-        console.log(props.id)
         return (
             <img onClick={() => {
                 activateLightBoxMode(props.img, props.id);
