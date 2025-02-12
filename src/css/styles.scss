@@ -51,6 +51,12 @@ $breakpoints: (phone: 320px, phoneSE: 375px, tablet: 768px, desktop: 1024px);
   background: #555;
 }
 
+// selection
+
+::selection {
+  background: #8a02b5;
+}
+
 // css
 
 * {
