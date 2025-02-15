@@ -291,6 +291,19 @@ body {
     padding-right: 0.5vw;
     margin-top: -3.1vh;
     height: 57vh;
+
+    @include media(">phone", "<=tablet") {
+      width: 3px;
+      position: relative;
+      top: -20vw;
+      scale: 80%;
+    }
+    @include media(">=s20ultra", "<=tablet") {
+      width: 3px;
+      position: relative;
+      top: -20vw;
+      scale: 80%;
+    }
   }
 
   .s3rightCont {
@@ -304,6 +317,17 @@ body {
     @include media(">phoneSE", "<=tablet") {
       margin-left: 40.5vw;
       scale: 150%;
+    }
+    @include media(">=s20ultra", "<=tablet") {
+      margin-left: 25.5vw;
+      margin-top: 10vw;
+      scale: 150%;
+    }
+
+    .underProfileTxt {
+      @include media(">phone", "<=tablet") {
+        display: none;
+      }
     }
 
     ul {
@@ -320,6 +344,10 @@ body {
       width: 20.8vw;
       display: flex;
       flex-direction: column;
+
+      @include media(">phone", "<=tablet") {
+        padding-left: 3vw;
+      }
     }
 
     .underProfile {
