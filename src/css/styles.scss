@@ -3,7 +3,7 @@
 
 $scrollBarWidth: 0.65vw;
 
-$breakpoints: (phone: 320px, phoneSE: 375px, tablet: 768px, desktop: 1024px);
+$breakpoints: (phone: 320px, phoneSE: 375px, s20ultra: 412px, tablet: 768px, desktop: 1024px);
 
 // mixins
 
@@ -249,6 +249,10 @@ body {
         margin-left: -70.8vw;
         height: 24vh;
       }
+      @include media(">=s20ultra", "<=tablet") {
+        margin-left: -60.8vw;
+        height: 24vh;
+      }
     }
   }
 
@@ -399,9 +403,16 @@ body {
       scale: 50%;
     }
     @include media(">phoneSE", "<=tablet") {
-      margin-left: -15.5vw;
+      margin-left: -34vw;
+
       scale: 50%;
     }
+    @include media(">=s20ultra", "<=tablet") {
+      margin-left: -34vw;
+
+      scale: 50%;
+    }
+
 
   }
 }
